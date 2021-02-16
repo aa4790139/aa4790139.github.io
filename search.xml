@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>算法&amp;数据结构-梳理汇总</title>
+    <title>算法与数据结构-梳理汇总</title>
     <url>/2021/02/16/Algorithm-DataStruct01/</url>
     <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>算法&amp;数据结构，重学起因</li>
+<li>算法与数据结构，重学起因</li>
 <li>算法与数据结构-梳理汇总导图</li>
 <li>学习心得</li>
 </ul>
-<h3 id="算法-amp-数据结构，重学起因"><a href="#算法-amp-数据结构，重学起因" class="headerlink" title="算法&amp;数据结构，重学起因"></a>算法&amp;数据结构，重学起因</h3><blockquote>
+<h3 id="算法与数据结构，重学起因"><a href="#算法与数据结构，重学起因" class="headerlink" title="算法与数据结构，重学起因"></a>算法与数据结构，重学起因</h3><blockquote>
 <p>起因：虽然在大学期间学习过算法，刚开始学习基础排序算法、基础数据结构还好，但到后面学习、快速排序、二分查找、双向链表、循环链表、各种树等，就开始顶不住了，觉得太复杂、太难就学不动了，导致学得挺差，现在也基本忘得差不多了。前端时间看到昊神分享的一篇算法学习文章，就接触到了波波老师的文章，提到算法也没有传说中的难，说得挺简单的，然后我就跑到慕课网找到了波波老师的课程【<a href="https://class.imooc.com/sc/105/learn">算法与数据结构体系课：覆盖0~5年工作面试所需</a>】，原价：￥1199 折后：￥999，贵竟然好评率100%。心想：投资自己是最好的投资，就狠心放次血吧~ </p>
 </blockquote>
 <a id="more"></a>
-<h3 id="算法与数据结构-梳理汇总导图"><a href="#算法与数据结构-梳理汇总导图" class="headerlink" title="算法与数据结构-梳理汇总导图"></a>算法与数据结构-梳理汇总导图</h3><p><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master/img/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&amp;%E7%AE%97%E6%B3%95.jpg" alt=""></p>
+<h3 id="算法与数据结构-梳理汇总导图"><a href="#算法与数据结构-梳理汇总导图" class="headerlink" title="算法与数据结构-梳理汇总导图"></a>算法与数据结构-梳理汇总导图</h3><p><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master/img/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&amp;%E7%AE%97%E6%B3%95.png" alt=""></p>
 <h3 id="学习心得"><a href="#学习心得" class="headerlink" title="学习心得"></a>学习心得</h3><ol>
 <li>学习一个知识：需消化成自己理解后的样子，然后再输出出来</li>
 <li>学习一个知识：使用思维导图绘成一幅图。一来：让自己非常直观的看到知识点间的关系，二来：方便知识点的记忆，三来：未来根据图快速全面的回顾知识点。</li>
@@ -34,7 +34,7 @@
 </blockquote>
 ]]></content>
       <categories>
-        <category>算法&amp;数据结构</category>
+        <category>算法与数据结构</category>
       </categories>
       <tags>
         <tag>常用排序</tag>
@@ -92,130 +92,6 @@
       </categories>
       <tags>
         <tag>测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python-03：Web自动化测试【打开Chrome百度搜索Selenium】</title>
-    <url>/2020/12/17/AutoTest03/</url>
-    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>环境准备</li>
-<li>案例：打开Chrome百度搜索Selenium</li>
-<li>原理总结</li>
-</ul>
-<a id="more"></a>
-<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ol>
-<li>Win10</li>
-<li>Chrome 84.0.4147.135</li>
-<li>ChromeDriver 84.0.4147.30<ol>
-<li>关闭Chrome更新，避免不停换驱动</li>
-<li>下载Chrome对应版本ChromeDriver驱动<a href="https://chromedriver.chromium.org/downloads">下载地址</a></li>
-<li>将ChromeDriver 放到Python安装目录下. 比如：C:\Users\Administrator\AppData\Local\Programs\Python\Python39</li>
-</ol>
-</li>
-<li>Python 3.9.0</li>
-<li>Selenium 3.141.0<br> 安装命令：pip install selenium (提示：如果执行报错，请检查python环境变量配置)</li>
-</ol>
-<h3 id="案例：打开Chrome百度搜索Selenium"><a href="#案例：打开Chrome百度搜索Selenium" class="headerlink" title="案例：打开Chrome百度搜索Selenium"></a>案例：打开Chrome百度搜索Selenium</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from selenium import  webdriver</span><br><span class="line"># 使用Chrome驱动</span><br><span class="line">driver &#x3D; webdriver.Chrome()</span><br><span class="line"># 让浏览器全屏</span><br><span class="line">driver.maximize_window()</span><br><span class="line"># 打开百度</span><br><span class="line">driver.get(&quot;https:&#x2F;&#x2F;baidu.com&quot;)</span><br><span class="line"># 找到百度搜索框元素</span><br><span class="line">input &#x3D; driver.find_element_by_id(&quot;kw&quot;)</span><br><span class="line"># 往输入框中输入搜索关键词&quot;selenium&quot;</span><br><span class="line">input.send_keys(&quot;selenium&quot;)</span><br><span class="line"># 点击百度一下按钮搜索</span><br><span class="line">search &#x3D; driver.find_element_by_id(&quot;su&quot;)</span><br><span class="line">search.click()</span><br></pre></td></tr></table></figure>
-<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><blockquote>
-<p>其实原理就是 Python 通过Selenium 调用浏览器驱动接口，然后驱动Driver接口操作Web中元素进行交互</p>
-</blockquote>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献:"></a>参考文献:</h3><ul>
-<li><a href="https://selenium-python-zh.readthedocs.io/en/latest/index.html">Selenium-Python中文文档</a></li>
-</ul>
-<hr>
-<blockquote>
-<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>自动化测试</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Selenium</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>结束《皇室战争》之旅</title>
-    <url>/2020/12/17/Game01/</url>
-    <content><![CDATA[<h3 id="一款又爱又恨的游戏"><a href="#一款又爱又恨的游戏" class="headerlink" title="一款又爱又恨的游戏"></a>一款又爱又恨的游戏</h3><ul>
-<li>爱：<ol>
-<li>这游戏UI和画质都做得非常精美，原画的细节做得非常逼真</li>
-<li>3分钟一场战斗，游戏时间设置的完美</li>
-<li>操作简单，容易上手</li>
-</ol>
-</li>
-<li>恨:<ol>
-<li>3分钟一场战斗，导致你蹲个坑都可以玩几局，有时输能让你蹲出半个多小时，最后起来酸的不行</li>
-<li>部落战匹配规则做得不好，分段6K左右自己卡等只有10级，结果给你匹配满级的来对付你，你技术再好也是以卵击石</li>
-<li>商店不断推出活动引诱你充值，看到你要啥卡牌、是没有金币还是没有宝石，就给你推对应的活动</li>
-<li>影响与家人的关系，有时候连输好几把，家人跟我聊天，我说话很冲，导致跟对方吵起来</li>
-<li>不间断活动、每天对战，让你控制不住不玩，不停想上分，影响工作和学习</li>
-</ol>
-</li>
-</ul>
-<a id="more"></a>
-<h3 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h3><ol>
-<li>对方出的每张卡都记住，等全部8张卡出完，再想怎么用当前的卡组对付它</li>
-<li>未知对方卡组，尽量使用小费过牌，等待摸清对方卡组再出手</li>
-<li>排兵布阵不能全部放到一块，要分散放，不然被对面一个法术全部打中</li>
-</ol>
-<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><blockquote>
-<p>要升级的卡组已升满，没有玩下去的欲望了，本想这个赛季冲个6500+，结果没多少时间打，中午打了一个多小时，结果卡住6150上不去了，那就让他停留在6150结束这段旅程。接下来开启新的篇章，好好学习、好好工作，这样才能有好的未来</p>
-</blockquote>
-<p><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master/img/222.png" alt=""></p>
-]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>皇室战争</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python-04：AppWeb自动化测试【打开App切换WebView登录】</title>
-    <url>/2020/12/17/AutoTest04/</url>
-    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>环境准备</li>
-<li>测试步骤</li>
-<li>案例代码</li>
-</ul>
-<a id="more"></a>
-<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ol>
-<li>NodeJS v12.13.1</li>
-<li>JDK 1.8.0_191</li>
-<li>Android SDK </li>
-<li>Appium-Python-Client </li>
-</ol>
-<blockquote>
-<p>具体教程请看: <a href="https://yanxuewen.cn/2020/10/22/AutoTest02/">自动化测试-02：实践</a></p>
-</blockquote>
-<h3 id="步骤如下"><a href="#步骤如下" class="headerlink" title="步骤如下"></a>步骤如下</h3><ol>
-<li>AppWebView开启调试模式： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setWebContentsDebuggingEnabled(true);</span><br></pre></td></tr></table></figure></li>
-<li>获取Android Chrome 版本： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">adb shell am start -a android.intent.action.VIEW -d  https:&#x2F;&#x2F;liulanmi.com&#x2F;labs&#x2F;core.html</span><br></pre></td></tr></table></figure></li>
-<li>根据Android Chrome版本，下载对应ChromeDriver驱动 <a href="https://chromedriver.chromium.org/downloads">下载地址</a></li>
-<li>将下载的ChromeDriver Copy 至 Appium 目录，比如我的Appium目录： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-chromedriver\chromedriver\win</span><br></pre></td></tr></table></figure></li>
-<li>启动APP后并跳转App内嵌的WebView页面，使用Chrome获取WebView中的元素 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">打开Chrome </span><br><span class="line">地址栏输入：chrome:&#x2F;&#x2F;inspect</span><br></pre></td></tr></table></figure>
- 如下图所示：<br> <img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master/img/20201105212810.png" alt=""></li>
-</ol>
-<h3 id="案例代码"><a href="#案例代码" class="headerlink" title="案例代码"></a>案例代码</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 案例：自动化测试-登录</span><br><span class="line"></span><br><span class="line">from appium import webdriver</span><br><span class="line">from selenium.webdriver.common.by import By</span><br><span class="line"></span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line">desired_caps &#x3D; &#123;&#125;</span><br><span class="line">desired_caps[&quot;platformName&quot;] &#x3D; &quot;android&quot;</span><br><span class="line">desired_caps[&quot;platformVersion&quot;] &#x3D; &quot;7.1.2&quot;</span><br><span class="line">desired_caps[&quot;deviceName&quot;] &#x3D; &quot;127.0.0.1:62001&quot;</span><br><span class="line">desired_caps[&quot;appPackage&quot;] &#x3D; &quot;com.guide.custom&quot;</span><br><span class="line">desired_caps[&quot;appActivity&quot;] &#x3D; &quot;com.anyapps.Activity.AALaunch&quot;</span><br><span class="line">desired_caps[&quot;noReset&quot;] &#x3D; &quot;true&quot;</span><br><span class="line">desired_caps[&quot;autoGrantPermissions&quot;] &#x3D; &quot;true&quot;</span><br><span class="line">desired_caps[&#39;chromeOptions&#39;] &#x3D; &#123;&quot;w3c&quot;:False&#125;</span><br><span class="line">desired_caps[&#39;showChromedriverLog&#39;] &#x3D; True</span><br><span class="line"></span><br><span class="line">driver &#x3D; webdriver.Remote(&#39;http:&#x2F;&#x2F;localhost:4723&#x2F;wd&#x2F;hub&#39;, desired_caps)</span><br><span class="line"></span><br><span class="line">view_context &#x3D; &quot;WEBVIEW_com.guide.custom&quot;</span><br><span class="line">driver.switch_to.context(view_context)</span><br><span class="line">time.sleep(5)</span><br><span class="line">print(driver.current_context)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 获取账号和密码元素，输入账号密码</span><br><span class="line">inputAccount &#x3D; driver.find_element_by_id(&quot;account&quot;)</span><br><span class="line">inputAccount.send_keys(&#39;186xxxxxxx&#39;)</span><br><span class="line">inputPassword &#x3D; driver.find_element_by_id(&quot;password&quot;)</span><br><span class="line">inputPassword.send_keys(&#39;123456&#39;)</span><br><span class="line"># 获取登录元素，点击登录</span><br><span class="line">loginBtn &#x3D; driver.find_element_by_class_name(&#39;confirmDisable&#39;)</span><br><span class="line">loginBtn.click()</span><br></pre></td></tr></table></figure>
-<h3 id="Appium-调试App-原理图"><a href="#Appium-调试App-原理图" class="headerlink" title="Appium 调试App 原理图"></a>Appium 调试App 原理图</h3><p><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master/img/QQ%E6%88%AA%E5%9B%BE20201105213544.png" alt=""></p>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献:"></a>参考文献:</h3><ul>
-<li><a href="https://selenium-python-zh.readthedocs.io/en/latest/index.html">Selenium-Python中文文档</a></li>
-<li><a href="https://github.com/appium/appium/issues/13306">Fail to locate an web element using “findElement” on Android</a></li>
-</ul>
-<hr>
-<blockquote>
-<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>自动化测试</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Selenium</tag>
-        <tag>Appnium</tag>
       </tags>
   </entry>
   <entry>
@@ -290,6 +166,93 @@
       </categories>
       <tags>
         <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python-04：AppWeb自动化测试【打开App切换WebView登录】</title>
+    <url>/2020/12/17/AutoTest04/</url>
+    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
+<li>环境准备</li>
+<li>测试步骤</li>
+<li>案例代码</li>
+</ul>
+<a id="more"></a>
+<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ol>
+<li>NodeJS v12.13.1</li>
+<li>JDK 1.8.0_191</li>
+<li>Android SDK </li>
+<li>Appium-Python-Client </li>
+</ol>
+<blockquote>
+<p>具体教程请看: <a href="https://yanxuewen.cn/2020/10/22/AutoTest02/">自动化测试-02：实践</a></p>
+</blockquote>
+<h3 id="步骤如下"><a href="#步骤如下" class="headerlink" title="步骤如下"></a>步骤如下</h3><ol>
+<li>AppWebView开启调试模式： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setWebContentsDebuggingEnabled(true);</span><br></pre></td></tr></table></figure></li>
+<li>获取Android Chrome 版本： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">adb shell am start -a android.intent.action.VIEW -d  https:&#x2F;&#x2F;liulanmi.com&#x2F;labs&#x2F;core.html</span><br></pre></td></tr></table></figure></li>
+<li>根据Android Chrome版本，下载对应ChromeDriver驱动 <a href="https://chromedriver.chromium.org/downloads">下载地址</a></li>
+<li>将下载的ChromeDriver Copy 至 Appium 目录，比如我的Appium目录： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-chromedriver\chromedriver\win</span><br></pre></td></tr></table></figure></li>
+<li>启动APP后并跳转App内嵌的WebView页面，使用Chrome获取WebView中的元素 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">打开Chrome </span><br><span class="line">地址栏输入：chrome:&#x2F;&#x2F;inspect</span><br></pre></td></tr></table></figure>
+ 如下图所示：<br> <img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master/img/20201105212810.png" alt=""></li>
+</ol>
+<h3 id="案例代码"><a href="#案例代码" class="headerlink" title="案例代码"></a>案例代码</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 案例：自动化测试-登录</span><br><span class="line"></span><br><span class="line">from appium import webdriver</span><br><span class="line">from selenium.webdriver.common.by import By</span><br><span class="line"></span><br><span class="line">import time</span><br><span class="line"></span><br><span class="line">desired_caps &#x3D; &#123;&#125;</span><br><span class="line">desired_caps[&quot;platformName&quot;] &#x3D; &quot;android&quot;</span><br><span class="line">desired_caps[&quot;platformVersion&quot;] &#x3D; &quot;7.1.2&quot;</span><br><span class="line">desired_caps[&quot;deviceName&quot;] &#x3D; &quot;127.0.0.1:62001&quot;</span><br><span class="line">desired_caps[&quot;appPackage&quot;] &#x3D; &quot;com.guide.custom&quot;</span><br><span class="line">desired_caps[&quot;appActivity&quot;] &#x3D; &quot;com.anyapps.Activity.AALaunch&quot;</span><br><span class="line">desired_caps[&quot;noReset&quot;] &#x3D; &quot;true&quot;</span><br><span class="line">desired_caps[&quot;autoGrantPermissions&quot;] &#x3D; &quot;true&quot;</span><br><span class="line">desired_caps[&#39;chromeOptions&#39;] &#x3D; &#123;&quot;w3c&quot;:False&#125;</span><br><span class="line">desired_caps[&#39;showChromedriverLog&#39;] &#x3D; True</span><br><span class="line"></span><br><span class="line">driver &#x3D; webdriver.Remote(&#39;http:&#x2F;&#x2F;localhost:4723&#x2F;wd&#x2F;hub&#39;, desired_caps)</span><br><span class="line"></span><br><span class="line">view_context &#x3D; &quot;WEBVIEW_com.guide.custom&quot;</span><br><span class="line">driver.switch_to.context(view_context)</span><br><span class="line">time.sleep(5)</span><br><span class="line">print(driver.current_context)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 获取账号和密码元素，输入账号密码</span><br><span class="line">inputAccount &#x3D; driver.find_element_by_id(&quot;account&quot;)</span><br><span class="line">inputAccount.send_keys(&#39;186xxxxxxx&#39;)</span><br><span class="line">inputPassword &#x3D; driver.find_element_by_id(&quot;password&quot;)</span><br><span class="line">inputPassword.send_keys(&#39;123456&#39;)</span><br><span class="line"># 获取登录元素，点击登录</span><br><span class="line">loginBtn &#x3D; driver.find_element_by_class_name(&#39;confirmDisable&#39;)</span><br><span class="line">loginBtn.click()</span><br></pre></td></tr></table></figure>
+<h3 id="Appium-调试App-原理图"><a href="#Appium-调试App-原理图" class="headerlink" title="Appium 调试App 原理图"></a>Appium 调试App 原理图</h3><p><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master/img/QQ%E6%88%AA%E5%9B%BE20201105213544.png" alt=""></p>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献:"></a>参考文献:</h3><ul>
+<li><a href="https://selenium-python-zh.readthedocs.io/en/latest/index.html">Selenium-Python中文文档</a></li>
+<li><a href="https://github.com/appium/appium/issues/13306">Fail to locate an web element using “findElement” on Android</a></li>
+</ul>
+<hr>
+<blockquote>
+<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>自动化测试</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Selenium</tag>
+        <tag>Appnium</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python-03：Web自动化测试【打开Chrome百度搜索Selenium】</title>
+    <url>/2020/12/17/AutoTest03/</url>
+    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
+<li>环境准备</li>
+<li>案例：打开Chrome百度搜索Selenium</li>
+<li>原理总结</li>
+</ul>
+<a id="more"></a>
+<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ol>
+<li>Win10</li>
+<li>Chrome 84.0.4147.135</li>
+<li>ChromeDriver 84.0.4147.30<ol>
+<li>关闭Chrome更新，避免不停换驱动</li>
+<li>下载Chrome对应版本ChromeDriver驱动<a href="https://chromedriver.chromium.org/downloads">下载地址</a></li>
+<li>将ChromeDriver 放到Python安装目录下. 比如：C:\Users\Administrator\AppData\Local\Programs\Python\Python39</li>
+</ol>
+</li>
+<li>Python 3.9.0</li>
+<li>Selenium 3.141.0<br> 安装命令：pip install selenium (提示：如果执行报错，请检查python环境变量配置)</li>
+</ol>
+<h3 id="案例：打开Chrome百度搜索Selenium"><a href="#案例：打开Chrome百度搜索Selenium" class="headerlink" title="案例：打开Chrome百度搜索Selenium"></a>案例：打开Chrome百度搜索Selenium</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from selenium import  webdriver</span><br><span class="line"># 使用Chrome驱动</span><br><span class="line">driver &#x3D; webdriver.Chrome()</span><br><span class="line"># 让浏览器全屏</span><br><span class="line">driver.maximize_window()</span><br><span class="line"># 打开百度</span><br><span class="line">driver.get(&quot;https:&#x2F;&#x2F;baidu.com&quot;)</span><br><span class="line"># 找到百度搜索框元素</span><br><span class="line">input &#x3D; driver.find_element_by_id(&quot;kw&quot;)</span><br><span class="line"># 往输入框中输入搜索关键词&quot;selenium&quot;</span><br><span class="line">input.send_keys(&quot;selenium&quot;)</span><br><span class="line"># 点击百度一下按钮搜索</span><br><span class="line">search &#x3D; driver.find_element_by_id(&quot;su&quot;)</span><br><span class="line">search.click()</span><br></pre></td></tr></table></figure>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><blockquote>
+<p>其实原理就是 Python 通过Selenium 调用浏览器驱动接口，然后驱动Driver接口操作Web中元素进行交互</p>
+</blockquote>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献:"></a>参考文献:</h3><ul>
+<li><a href="https://selenium-python-zh.readthedocs.io/en/latest/index.html">Selenium-Python中文文档</a></li>
+</ul>
+<hr>
+<blockquote>
+<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>自动化测试</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Selenium</tag>
       </tags>
   </entry>
   <entry>
@@ -427,6 +390,43 @@
         <tag>Github</tag>
         <tag>Hexo</tag>
         <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>结束《皇室战争》之旅</title>
+    <url>/2020/12/17/Game01/</url>
+    <content><![CDATA[<h3 id="一款又爱又恨的游戏"><a href="#一款又爱又恨的游戏" class="headerlink" title="一款又爱又恨的游戏"></a>一款又爱又恨的游戏</h3><ul>
+<li>爱：<ol>
+<li>这游戏UI和画质都做得非常精美，原画的细节做得非常逼真</li>
+<li>3分钟一场战斗，游戏时间设置的完美</li>
+<li>操作简单，容易上手</li>
+</ol>
+</li>
+<li>恨:<ol>
+<li>3分钟一场战斗，导致你蹲个坑都可以玩几局，有时输能让你蹲出半个多小时，最后起来酸的不行</li>
+<li>部落战匹配规则做得不好，分段6K左右自己卡等只有10级，结果给你匹配满级的来对付你，你技术再好也是以卵击石</li>
+<li>商店不断推出活动引诱你充值，看到你要啥卡牌、是没有金币还是没有宝石，就给你推对应的活动</li>
+<li>影响与家人的关系，有时候连输好几把，家人跟我聊天，我说话很冲，导致跟对方吵起来</li>
+<li>不间断活动、每天对战，让你控制不住不玩，不停想上分，影响工作和学习</li>
+</ol>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h3><ol>
+<li>对方出的每张卡都记住，等全部8张卡出完，再想怎么用当前的卡组对付它</li>
+<li>未知对方卡组，尽量使用小费过牌，等待摸清对方卡组再出手</li>
+<li>排兵布阵不能全部放到一块，要分散放，不然被对面一个法术全部打中</li>
+</ol>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><blockquote>
+<p>要升级的卡组已升满，没有玩下去的欲望了，本想这个赛季冲个6500+，结果没多少时间打，中午打了一个多小时，结果卡住6150上不去了，那就让他停留在6150结束这段旅程。接下来开启新的篇章，好好学习、好好工作，这样才能有好的未来</p>
+</blockquote>
+<p><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master/img/222.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>皇室战争</tag>
       </tags>
   </entry>
   <entry>
@@ -596,6 +596,53 @@
       </tags>
   </entry>
   <entry>
+    <title>全栈学习-开篇-001</title>
+    <url>/2020/12/17/LearningFullStack01/</url>
+    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
+<li>技术栈介绍</li>
+<li>环境准备</li>
+</ul>
+<a id="more"></a>
+<blockquote>
+<p>起因：在网上搜索了挺久，都没找到让我很满意的项目学习，也买了好几个付费项目，看了一部分就会发现看不下去，发现很多问题，虽然说能学到一部分东西，但感觉这些项目只是为了快速赚钱搞的，项目结构不清晰、缺少项目相关的介绍文档、前后端项目代码不分离，代码也写的非常临时和随意等等，可能我要求过高了。我如果用这种方式去做一个正式商业化的项目，用这种态度搞出来的东西肯定做不大。说实话我以前做东西也很随意，但自从我读了《程序员修炼之道》这本书后(若想成为一名真正的程序员，一定要去好好阅读这边书，去吸收点灵气)，让我受益匪浅。要想成为一个好的工程师，就要约束好自己，做事情不要太随意，得有点工匠精神，像匠人一样打造自己的武器，一段时间后你会发现自己层次上了一个阶梯。为了提升下自己全栈方便的能力，选择了我慕客上购买的一个小项目，这个小项目很适合入手，所以就拿这个项目(简版-慕客商城)开启全栈学习之旅。</p>
+</blockquote>
+<h3 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h3><ol>
+<li><p>前端</p>
+<ul>
+<li>Vue - 2.2.6</li>
+<li>vue-cookie - 1.1.4</li>
+<li>vue-resource - 1.3.1</li>
+<li>vue-router - 2.3.1</li>
+<li>vuex - 2.3.1</li>
+</ul>
+</li>
+<li><p>后端</p>
+<ul>
+<li>Node.js - 12.13.1</li>
+<li>Express - 4.14.1</li>
+<li>Mongoose - 5.0.1</li>
+<li>Mongodb - 4.2.8</li>
+</ul>
+</li>
+</ol>
+<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ul>
+<li>WebStorm - 2020.1 (方便后端调试，对比VScode、SublimeText、HBuildX 这IDE功能更强大)</li>
+<li>XShell6 、XFTP6 </li>
+<li>Navicat Premium 12 (低版本不支持连mongodb，所以请选择高一点的版本)</li>
+</ul>
+<blockquote>
+<p>未完待续…</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>全栈</category>
+      </categories>
+      <tags>
+        <tag>全栈</tag>
+        <tag>NodeJS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CORS-跨域实战</title>
     <url>/2021/02/05/JS03/</url>
     <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
@@ -643,50 +690,32 @@
       </tags>
   </entry>
   <entry>
-    <title>全栈学习-开篇-001</title>
-    <url>/2020/12/17/LearningFullStack01/</url>
+    <title>屏蔽：键盘按键、鼠标点击事件</title>
+    <url>/2020/12/17/PreventEvent/</url>
     <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>技术栈介绍</li>
-<li>环境准备</li>
+<li>屏蔽-键盘按键</li>
+<li>屏蔽-鼠标点击</li>
+<li>屏蔽-BackSpace</li>
 </ul>
 <a id="more"></a>
-<blockquote>
-<p>起因：在网上搜索了挺久，都没找到让我很满意的项目学习，也买了好几个付费项目，看了一部分就会发现看不下去，发现很多问题，虽然说能学到一部分东西，但感觉这些项目只是为了快速赚钱搞的，项目结构不清晰、缺少项目相关的介绍文档、前后端项目代码不分离，代码也写的非常临时和随意等等，可能我要求过高了。我如果用这种方式去做一个正式商业化的项目，用这种态度搞出来的东西肯定做不大。说实话我以前做东西也很随意，但自从我读了《程序员修炼之道》这本书后(若想成为一名真正的程序员，一定要去好好阅读这边书，去吸收点灵气)，让我受益匪浅。要想成为一个好的工程师，就要约束好自己，做事情不要太随意，得有点工匠精神，像匠人一样打造自己的武器，一段时间后你会发现自己层次上了一个阶梯。为了提升下自己全栈方便的能力，选择了我慕客上购买的一个小项目，这个小项目很适合入手，所以就拿这个项目(简版-慕客商城)开启全栈学习之旅。</p>
-</blockquote>
-<h3 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h3><ol>
-<li><p>前端</p>
+<h3 id="屏蔽-键盘按键"><a href="#屏蔽-键盘按键" class="headerlink" title="屏蔽-键盘按键"></a>屏蔽-键盘按键</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;添加按键监听</span><br><span class="line">window.addEventListener(&#39;keydown&#39;, this.onKeyDown,true);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;移除按键监听</span><br><span class="line">window.removeEventListener(&quot;keydown&quot;,this.onKeyDown,true);</span><br><span class="line"></span><br><span class="line">onKeyDown(val)&#123;</span><br><span class="line">    console.log(&#39;按下&#39; + val.key);</span><br><span class="line">    val.preventDefault();</span><br><span class="line">    val.stopPropagation();</span><br><span class="line">    val.cancelBubble &#x3D; true;</span><br><span class="line">    window.event.returnValue &#x3D; false;</span><br><span class="line">    window.event.preventDefault();</span><br><span class="line">    window.event.stopPropagation();</span><br><span class="line">    window.event.cancelBubble &#x3D; true;</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="屏蔽-鼠标点击"><a href="#屏蔽-鼠标点击" class="headerlink" title="屏蔽-鼠标点击"></a>屏蔽-鼠标点击</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;添加鼠标点击监听</span><br><span class="line">window.addEventListener(&#39;mousedown&#39;,this.onClick,true);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;移除鼠标点击监听</span><br><span class="line">window.removeEventListener(&#39;mousedown&#39;,this.onClick,true);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;which: 1-左键 2-中键 3-右键</span><br><span class="line">onClick(val)&#123;</span><br><span class="line">    console.error(&#39;点击&#39; + val.which);</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="屏蔽-BackSpace"><a href="#屏蔽-BackSpace" class="headerlink" title="屏蔽-BackSpace"></a>屏蔽-BackSpace</h3><p>在IE页面跳转过程中，按BackSpace退格键默认返回上此浏览页，导致路由中断引起(Vue)页面卡死，所以需要在IE中屏蔽掉BackSpce退格键，但是在输入框中则不屏蔽。</p>
 <ul>
-<li>Vue - 2.2.6</li>
-<li>vue-cookie - 1.1.4</li>
-<li>vue-resource - 1.3.1</li>
-<li>vue-router - 2.3.1</li>
-<li>vuex - 2.3.1</li>
-</ul>
+<li>preventBackSpce.js： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">export const banBackSpace &#x3D; (e) &#x3D;&gt; &#123;</span><br><span class="line">  let ev &#x3D; e || window.event</span><br><span class="line">  &#x2F;&#x2F; 各种浏览器下获取事件对象</span><br><span class="line">  let obj &#x3D; ev.relatedTarget || ev.srcElement || ev.target || ev.currentTarget</span><br><span class="line">  &#x2F;&#x2F; 按下Backspace键</span><br><span class="line">  if (ev.keyCode &#x3D;&#x3D;&#x3D; 8) &#123;</span><br><span class="line">    &#x2F;&#x2F; 标签名称</span><br><span class="line">    let tagName &#x3D; obj.nodeName.toLowerCase();</span><br><span class="line">    &#x2F;&#x2F; 如果标签不是input或者textarea则阻止Backspace</span><br><span class="line">    if (tagName !&#x3D;&#x3D; &#39;input&#39; &amp;&amp; tagName !&#x3D;&#x3D; &#39;textarea&#39;) &#123;</span><br><span class="line">      return stopIt(ev)</span><br><span class="line">    &#125;</span><br><span class="line">    let tagType &#x3D; obj.type.toLowerCase() &#x2F;&#x2F; 标签类型</span><br><span class="line">    &#x2F;&#x2F; input标签除了下面几种类型，全部阻止Backspace</span><br><span class="line">    if (tagName &#x3D;&#x3D;&#x3D; &#39;input&#39; &amp;&amp; (tagType !&#x3D;&#x3D; &#39;text&#39; &amp;&amp; tagType !&#x3D;&#x3D; &#39;textarea&#39; &amp;&amp; tagType !&#x3D;&#x3D; &#39;password&#39;)) &#123;</span><br><span class="line">      return stopIt(ev)</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; input或者textarea输入框如果不可编辑则阻止Backspace</span><br><span class="line">    if ((tagName &#x3D;&#x3D;&#x3D; &#39;input&#39; || tagName &#x3D;&#x3D;&#x3D; &#39;textarea&#39;) &amp;&amp; (obj.readOnly &#x3D;&#x3D;&#x3D; true || obj.disabled &#x3D;&#x3D;&#x3D; true)) &#123;</span><br><span class="line">      return stopIt(ev)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function stopIt(ev) &#123;</span><br><span class="line">  if (ev.preventDefault) &#123;</span><br><span class="line">    &#x2F;&#x2F; preventDefault()方法阻止元素发生默认的行为</span><br><span class="line">    ev.preventDefault()</span><br><span class="line">  &#125;</span><br><span class="line">  if (ev.returnValue) &#123;</span><br><span class="line">    &#x2F;&#x2F; IE浏览器下用window.event.returnValue &#x3D; false;实现阻止元素发生默认的行为</span><br><span class="line">  &#125;</span><br><span class="line">  return false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>使用方法：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 在需要使用的Vue页面引入组件(一般在main.vue中添加)</span><br><span class="line">import &#123;banBackSpace&#125; from &quot;@&#x2F;util&#x2F;preventBackspace&quot;;</span><br><span class="line"></span><br><span class="line">2. mounted 钩子函数挂载事件</span><br><span class="line">document.onkeypress &#x3D; banBackSpace;</span><br><span class="line">document.onkeydown &#x3D; banBackSpace;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>后端</p>
-<ul>
-<li>Node.js - 12.13.1</li>
-<li>Express - 4.14.1</li>
-<li>Mongoose - 5.0.1</li>
-<li>Mongodb - 4.2.8</li>
 </ul>
-</li>
-</ol>
-<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ul>
-<li>WebStorm - 2020.1 (方便后端调试，对比VScode、SublimeText、HBuildX 这IDE功能更强大)</li>
-<li>XShell6 、XFTP6 </li>
-<li>Navicat Premium 12 (低版本不支持连mongodb，所以请选择高一点的版本)</li>
-</ul>
+<hr>
 <blockquote>
-<p>未完待续…</p>
+<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>全栈</category>
+        <category>H5</category>
       </categories>
       <tags>
-        <tag>全栈</tag>
-        <tag>NodeJS</tag>
+        <tag>事件屏蔽</tag>
       </tags>
   </entry>
   <entry>
@@ -741,32 +770,27 @@
       </tags>
   </entry>
   <entry>
-    <title>屏蔽：键盘按键、鼠标点击事件</title>
-    <url>/2020/12/17/PreventEvent/</url>
-    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>屏蔽-键盘按键</li>
-<li>屏蔽-鼠标点击</li>
-<li>屏蔽-BackSpace</li>
-</ul>
-<a id="more"></a>
-<h3 id="屏蔽-键盘按键"><a href="#屏蔽-键盘按键" class="headerlink" title="屏蔽-键盘按键"></a>屏蔽-键盘按键</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;添加按键监听</span><br><span class="line">window.addEventListener(&#39;keydown&#39;, this.onKeyDown,true);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;移除按键监听</span><br><span class="line">window.removeEventListener(&quot;keydown&quot;,this.onKeyDown,true);</span><br><span class="line"></span><br><span class="line">onKeyDown(val)&#123;</span><br><span class="line">    console.log(&#39;按下&#39; + val.key);</span><br><span class="line">    val.preventDefault();</span><br><span class="line">    val.stopPropagation();</span><br><span class="line">    val.cancelBubble &#x3D; true;</span><br><span class="line">    window.event.returnValue &#x3D; false;</span><br><span class="line">    window.event.preventDefault();</span><br><span class="line">    window.event.stopPropagation();</span><br><span class="line">    window.event.cancelBubble &#x3D; true;</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="屏蔽-鼠标点击"><a href="#屏蔽-鼠标点击" class="headerlink" title="屏蔽-鼠标点击"></a>屏蔽-鼠标点击</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;添加鼠标点击监听</span><br><span class="line">window.addEventListener(&#39;mousedown&#39;,this.onClick,true);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;移除鼠标点击监听</span><br><span class="line">window.removeEventListener(&#39;mousedown&#39;,this.onClick,true);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;which: 1-左键 2-中键 3-右键</span><br><span class="line">onClick(val)&#123;</span><br><span class="line">    console.error(&#39;点击&#39; + val.which);</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="屏蔽-BackSpace"><a href="#屏蔽-BackSpace" class="headerlink" title="屏蔽-BackSpace"></a>屏蔽-BackSpace</h3><p>在IE页面跳转过程中，按BackSpace退格键默认返回上此浏览页，导致路由中断引起(Vue)页面卡死，所以需要在IE中屏蔽掉BackSpce退格键，但是在输入框中则不屏蔽。</p>
-<ul>
-<li>preventBackSpce.js： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">export const banBackSpace &#x3D; (e) &#x3D;&gt; &#123;</span><br><span class="line">  let ev &#x3D; e || window.event</span><br><span class="line">  &#x2F;&#x2F; 各种浏览器下获取事件对象</span><br><span class="line">  let obj &#x3D; ev.relatedTarget || ev.srcElement || ev.target || ev.currentTarget</span><br><span class="line">  &#x2F;&#x2F; 按下Backspace键</span><br><span class="line">  if (ev.keyCode &#x3D;&#x3D;&#x3D; 8) &#123;</span><br><span class="line">    &#x2F;&#x2F; 标签名称</span><br><span class="line">    let tagName &#x3D; obj.nodeName.toLowerCase();</span><br><span class="line">    &#x2F;&#x2F; 如果标签不是input或者textarea则阻止Backspace</span><br><span class="line">    if (tagName !&#x3D;&#x3D; &#39;input&#39; &amp;&amp; tagName !&#x3D;&#x3D; &#39;textarea&#39;) &#123;</span><br><span class="line">      return stopIt(ev)</span><br><span class="line">    &#125;</span><br><span class="line">    let tagType &#x3D; obj.type.toLowerCase() &#x2F;&#x2F; 标签类型</span><br><span class="line">    &#x2F;&#x2F; input标签除了下面几种类型，全部阻止Backspace</span><br><span class="line">    if (tagName &#x3D;&#x3D;&#x3D; &#39;input&#39; &amp;&amp; (tagType !&#x3D;&#x3D; &#39;text&#39; &amp;&amp; tagType !&#x3D;&#x3D; &#39;textarea&#39; &amp;&amp; tagType !&#x3D;&#x3D; &#39;password&#39;)) &#123;</span><br><span class="line">      return stopIt(ev)</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; input或者textarea输入框如果不可编辑则阻止Backspace</span><br><span class="line">    if ((tagName &#x3D;&#x3D;&#x3D; &#39;input&#39; || tagName &#x3D;&#x3D;&#x3D; &#39;textarea&#39;) &amp;&amp; (obj.readOnly &#x3D;&#x3D;&#x3D; true || obj.disabled &#x3D;&#x3D;&#x3D; true)) &#123;</span><br><span class="line">      return stopIt(ev)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function stopIt(ev) &#123;</span><br><span class="line">  if (ev.preventDefault) &#123;</span><br><span class="line">    &#x2F;&#x2F; preventDefault()方法阻止元素发生默认的行为</span><br><span class="line">    ev.preventDefault()</span><br><span class="line">  &#125;</span><br><span class="line">  if (ev.returnValue) &#123;</span><br><span class="line">    &#x2F;&#x2F; IE浏览器下用window.event.returnValue &#x3D; false;实现阻止元素发生默认的行为</span><br><span class="line">  &#125;</span><br><span class="line">  return false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>使用方法：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 在需要使用的Vue页面引入组件(一般在main.vue中添加)</span><br><span class="line">import &#123;banBackSpace&#125; from &quot;@&#x2F;util&#x2F;preventBackspace&quot;;</span><br><span class="line"></span><br><span class="line">2. mounted 钩子函数挂载事件</span><br><span class="line">document.onkeypress &#x3D; banBackSpace;</span><br><span class="line">document.onkeydown &#x3D; banBackSpace;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+    <title>uni-app 如何引入Iconfont阿里巴巴矢量图标库</title>
+    <url>/2020/12/17/UniApp01/</url>
+    <content><![CDATA[<h3 id="步骤如下"><a href="#步骤如下" class="headerlink" title="步骤如下:"></a>步骤如下:</h3><ol>
+<li>下载图标项目, 解压后效果如下<br><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master/img/20201113164039.png" alt=""></li>
+<li><p>修改iconfont.css文件</p>
+<p> 修改前格式：</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@font-face &#123;font-family: &quot;iconfont&quot;;</span><br><span class="line">src: url(&#39;iconfont.eot?t&#x3D;1605254910083&#39;); &#x2F;* IE9 *&#x2F;</span><br><span class="line">src: url(&#39;iconfont.eot?t&#x3D;1605254910083#iefix&#39;) format(&#39;embedded-opentype&#39;), &#x2F;* IE6-IE8 *&#x2F;</span><br><span class="line">url(&#39;data:application&#x2F;x-font-woff2;charset&#x3D;utf-8;base64,转换的base64内容&#39;) format(&#39;woff2&#39;),</span><br><span class="line">url(&#39;iconfont.woff?t&#x3D;1605254910083&#39;) format(&#39;woff&#39;),</span><br><span class="line">url(&#39;iconfont.ttf?t&#x3D;1605254910083&#39;) format(&#39;truetype&#39;), &#x2F;* chrome, firefox, opera, Safari, Android, iOS 4.2+ *&#x2F;</span><br><span class="line">url(&#39;iconfont.svg?t&#x3D;1605254910083#iconfont&#39;) format(&#39;svg&#39;); &#x2F;* iOS 4.1- *&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 修改后格式: </p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line">    font-family: &quot;iconfont&quot;;</span><br><span class="line">    src: url(&#39;data:application&#x2F;x-font-woff2;charset&#x3D;utf-8;base64,转换的base64内容&#39;) format(&#39;woff2&#39;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>Copy字体文件iconfont.ttf和样式文件iconfont.css 至UniApp项目static/font目录中</li>
+</ol>
 <hr>
 <blockquote>
 <p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
 </blockquote>
 ]]></content>
       <categories>
-        <category>H5</category>
+        <category>前端</category>
       </categories>
       <tags>
-        <tag>事件屏蔽</tag>
+        <tag>UniApp</tag>
       </tags>
   </entry>
   <entry>
@@ -833,30 +857,6 @@
       </categories>
       <tags>
         <tag>防调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>uni-app 如何引入Iconfont阿里巴巴矢量图标库</title>
-    <url>/2020/12/17/UniApp01/</url>
-    <content><![CDATA[<h3 id="步骤如下"><a href="#步骤如下" class="headerlink" title="步骤如下:"></a>步骤如下:</h3><ol>
-<li>下载图标项目, 解压后效果如下<br><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master/img/20201113164039.png" alt=""></li>
-<li><p>修改iconfont.css文件</p>
-<p> 修改前格式：</p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@font-face &#123;font-family: &quot;iconfont&quot;;</span><br><span class="line">src: url(&#39;iconfont.eot?t&#x3D;1605254910083&#39;); &#x2F;* IE9 *&#x2F;</span><br><span class="line">src: url(&#39;iconfont.eot?t&#x3D;1605254910083#iefix&#39;) format(&#39;embedded-opentype&#39;), &#x2F;* IE6-IE8 *&#x2F;</span><br><span class="line">url(&#39;data:application&#x2F;x-font-woff2;charset&#x3D;utf-8;base64,转换的base64内容&#39;) format(&#39;woff2&#39;),</span><br><span class="line">url(&#39;iconfont.woff?t&#x3D;1605254910083&#39;) format(&#39;woff&#39;),</span><br><span class="line">url(&#39;iconfont.ttf?t&#x3D;1605254910083&#39;) format(&#39;truetype&#39;), &#x2F;* chrome, firefox, opera, Safari, Android, iOS 4.2+ *&#x2F;</span><br><span class="line">url(&#39;iconfont.svg?t&#x3D;1605254910083#iconfont&#39;) format(&#39;svg&#39;); &#x2F;* iOS 4.1- *&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 修改后格式: </p>
- <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line">    font-family: &quot;iconfont&quot;;</span><br><span class="line">    src: url(&#39;data:application&#x2F;x-font-woff2;charset&#x3D;utf-8;base64,转换的base64内容&#39;) format(&#39;woff2&#39;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>Copy字体文件iconfont.ttf和样式文件iconfont.css 至UniApp项目static/font目录中</li>
-</ol>
-<hr>
-<blockquote>
-<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>UniApp</tag>
       </tags>
   </entry>
   <entry>
