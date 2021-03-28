@@ -6,7 +6,7 @@
   <link href="https://yanxuewen.cn/atom.xml" rel="self"/>
   
   <link href="https://yanxuewen.cn/"/>
-  <updated>2021-03-28T05:51:16.912Z</updated>
+  <updated>2021-03-28T05:54:27.564Z</updated>
   <id>https://yanxuewen.cn/</id>
   
   <author>
@@ -21,19 +21,30 @@
     <link href="https://yanxuewen.cn/2021/03/28/Vue3.x_Vite2.x-01/"/>
     <id>https://yanxuewen.cn/2021/03/28/Vue3.x_Vite2.x-01/</id>
     <published>2021-03-28T05:02:58.285Z</published>
-    <updated>2021-03-28T05:51:16.912Z</updated>
+    <updated>2021-03-28T05:54:27.564Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>为了记录自己的成长经历，我决定把自己实战遇到的坑记录起来，一来方便日后查阅，二来给后人提供一份帮助。</p></blockquote><p><em>提示：本篇文章会持续更新，记录Vite相关遇到的坑</em></p><h2 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h2><p>大家都熟知开发环境不同，碰到的问题很有可能也不同。为了不给大家带来困恼（跟你配置完全一样，为啥你的可以我的不可以），介绍下我的开发环境</p><ul><li>Windows 10</li><li>VSCode  1.54.3</li><li>Node.js v12.16.1</li><li>Vue 3.0.5</li><li>Vite 2.0.5</li><li>typescript 4.1.3</li></ul><hr><h2 id="概要内容："><a href="#概要内容：" class="headerlink" title="概要内容："></a>概要内容：</h2><ol><li>配置alias无效</li><li>main.ts中全局引入样式，使用Sass样式变量提示变量未定义</li></ol><hr><h2 id="1-配置alias无效"><a href="#1-配置alias无效" class="headerlink" title="1. 配置alias无效"></a>1. 配置alias无效</h2><ul><li><p>报错如下：</p><p>  <img data-src="https://cdn.jsdelivr.net/gh/yxw007/BlogPicBed@master/img/20210328134430.png" alt=""></p></li></ul><ul><li><p>解决方法：</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; vite.config.ts 添加alias配置即可</span><br><span class="line"></span><br><span class="line">resolve: &#123;</span><br><span class="line">      alias: [</span><br><span class="line">        &#123;</span><br><span class="line">          find: &#39;&#x2F;@&#39;,</span><br><span class="line">          replacement: path.resolve(__dirname, &#39;.&#x2F;src&#39;)</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure></li></ul><hr><h2 id="2-main-ts中全局引入样式，使用Sass样式变量提示变量未定义"><a href="#2-main-ts中全局引入样式，使用Sass样式变量提示变量未定义" class="headerlink" title="2. main.ts中全局引入样式，使用Sass样式变量提示变量未定义"></a>2. main.ts中全局引入样式，使用Sass样式变量提示变量未定义</h2><ul><li><p>报错如下：</p><p>  <img data-src="https://cdn.jsdelivr.net/gh/yxw007/BlogPicBed@master/img/20210328134529.png" alt=""></p></li></ul><ul><li><p>解决方法：</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; vite.config.ts 添加对应sass变量样式文件配置即可</span><br><span class="line"></span><br><span class="line">css: &#123;</span><br><span class="line">      preprocessorOptions: &#123;</span><br><span class="line">        scss: &#123;</span><br><span class="line">          additionalData: &#96;@import &quot;.&#x2F;src&#x2F;assets&#x2F;styles&#x2F;variables&quot;;&#96;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure></li></ul><hr><blockquote><p>以上: 如发现有问题，欢迎留言指出，我及时更正</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>为了记录自己的成长经历，我决定把自己实战遇到的坑记录起来，一来方便日后查阅，二来给后人提供一份帮助。</p></blockquote><p><em>提示：本篇文章会持续更新，记录Vite相关遇到的坑</em></p><h2 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h2><p>大家都熟知开发环境不同，碰到的问题很有可能也不同。为了不给大家带来困恼（跟你配置完全一样，为啥你的可以我的不可以），介绍下我的开发环境</p><ul><li>Windows 10</li><li>VSCode  1.54.3</li><li>Node.js v12.16.1</li><li>Vue 3.0.5</li><li>Vite 2.0.5</li><li>typescript 4.1.3</li></ul><hr><h2 id="概要内容："><a href="#概要内容：" class="headerlink" title="概要内容："></a>概要内容：</h2><ol><li>配置alias无效</li><li>main.ts中全局引入样式，使用Sass样式变量提示变量未定义</li></ol><hr><a id="more"></a><h2 id="1-配置alias无效"><a href="#1-配置alias无效" class="headerlink" title="1. 配置alias无效"></a>1. 配置alias无效</h2><ul><li><p>报错如下：</p><p>  <img data-src="https://cdn.jsdelivr.net/gh/yxw007/BlogPicBed@master/img/20210328134430.png" alt=""></p></li></ul><ul><li><p>解决方法：</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; vite.config.ts 添加alias配置即可</span><br><span class="line"></span><br><span class="line">resolve: &#123;</span><br><span class="line">      alias: [</span><br><span class="line">        &#123;</span><br><span class="line">          find: &#39;&#x2F;@&#39;,</span><br><span class="line">          replacement: path.resolve(__dirname, &#39;.&#x2F;src&#39;)</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure></li></ul><hr><h2 id="2-main-ts中全局引入样式，使用Sass样式变量提示变量未定义"><a href="#2-main-ts中全局引入样式，使用Sass样式变量提示变量未定义" class="headerlink" title="2. main.ts中全局引入样式，使用Sass样式变量提示变量未定义"></a>2. main.ts中全局引入样式，使用Sass样式变量提示变量未定义</h2><ul><li><p>报错如下：</p><p>  <img data-src="https://cdn.jsdelivr.net/gh/yxw007/BlogPicBed@master/img/20210328134529.png" alt=""></p></li></ul><ul><li><p>解决方法：</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; vite.config.ts 添加对应sass变量样式文件配置即可</span><br><span class="line"></span><br><span class="line">css: &#123;</span><br><span class="line">      preprocessorOptions: &#123;</span><br><span class="line">        scss: &#123;</span><br><span class="line">          additionalData: &#96;@import &quot;.&#x2F;src&#x2F;assets&#x2F;styles&#x2F;variables&quot;;&#96;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure></li></ul><hr><blockquote><p>以上: 如发现有问题，欢迎留言指出，我及时更正</p></blockquote>]]></content>
     
     
-      
-      
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;为了记录自己的成长经历，我决定把自己实战遇到的坑记录起来，一来方便日后查阅，二来给后人提供一份帮助。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;提示：本篇文章会持续更新，记录Vite相关遇到的坑&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&quot;环境介绍&quot;</summary>
-      
+&lt;h2 id=&quot;环境介绍&quot;&gt;&lt;a href=&quot;#环境介绍&quot; class=&quot;headerlink&quot; title=&quot;环境介绍&quot;&gt;&lt;/a&gt;环境介绍&lt;/h2&gt;&lt;p&gt;大家都熟知开发环境不同，碰到的问题很有可能也不同。为了不给大家带来困恼（跟你配置完全一样，为啥你的可以我的不可以），介绍下我的开发环境&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows 10&lt;/li&gt;
+&lt;li&gt;VSCode  1.54.3&lt;/li&gt;
+&lt;li&gt;Node.js v12.16.1&lt;/li&gt;
+&lt;li&gt;Vue 3.0.5&lt;/li&gt;
+&lt;li&gt;Vite 2.0.5&lt;/li&gt;
+&lt;li&gt;typescript 4.1.3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;概要内容：&quot;&gt;&lt;a href=&quot;#概要内容：&quot; class=&quot;headerlink&quot; title=&quot;概要内容：&quot;&gt;&lt;/a&gt;概要内容：&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;配置alias无效&lt;/li&gt;
+&lt;li&gt;main.ts中全局引入样式，使用Sass样式变量提示变量未定义&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;</summary>
     
     
     

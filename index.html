@@ -226,7 +226,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-03-28 13:02:58 / 修改时间：13:51:16" itemprop="dateCreated datePublished" datetime="2021-03-28T13:02:58+08:00">2021-03-28</time>
+              <time title="创建时间：2021-03-28 13:02:58 / 修改时间：13:54:27" itemprop="dateCreated datePublished" datetime="2021-03-28T13:02:58+08:00">2021-03-28</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -303,32 +303,14 @@
 <li>main.ts中全局引入样式，使用Sass样式变量提示变量未定义</li>
 </ol>
 <hr>
-<h2 id="1-配置alias无效"><a href="#1-配置alias无效" class="headerlink" title="1. 配置alias无效"></a>1. 配置alias无效</h2><ul>
-<li><p>报错如下：</p>
-<p>  <img data-src="https://cdn.jsdelivr.net/gh/yxw007/BlogPicBed@master/img/20210328134430.png" alt=""></p>
-</li>
-</ul>
-<ul>
-<li><p>解决方法：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; vite.config.ts 添加alias配置即可</span><br><span class="line"></span><br><span class="line">resolve: &#123;</span><br><span class="line">      alias: [</span><br><span class="line">        &#123;</span><br><span class="line">          find: &#39;&#x2F;@&#39;,</span><br><span class="line">          replacement: path.resolve(__dirname, &#39;.&#x2F;src&#39;)</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h2 id="2-main-ts中全局引入样式，使用Sass样式变量提示变量未定义"><a href="#2-main-ts中全局引入样式，使用Sass样式变量提示变量未定义" class="headerlink" title="2. main.ts中全局引入样式，使用Sass样式变量提示变量未定义"></a>2. main.ts中全局引入样式，使用Sass样式变量提示变量未定义</h2><ul>
-<li><p>报错如下：</p>
-<p>  <img data-src="https://cdn.jsdelivr.net/gh/yxw007/BlogPicBed@master/img/20210328134529.png" alt=""></p>
-</li>
-</ul>
-<ul>
-<li><p>解决方法：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; vite.config.ts 添加对应sass变量样式文件配置即可</span><br><span class="line"></span><br><span class="line">css: &#123;</span><br><span class="line">      preprocessorOptions: &#123;</span><br><span class="line">        scss: &#123;</span><br><span class="line">          additionalData: &#96;@import &quot;.&#x2F;src&#x2F;assets&#x2F;styles&#x2F;variables&quot;;&#96;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<blockquote>
-<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
-</blockquote>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/28/Vue3.x_Vite2.x-01/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

@@ -95,47 +95,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python-03：Web自动化测试【打开Chrome百度搜索Selenium】</title>
-    <url>/2020/12/17/AutoTest03/</url>
-    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>环境准备</li>
-<li>案例：打开Chrome百度搜索Selenium</li>
-<li>原理总结</li>
-</ul>
-<a id="more"></a>
-<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ol>
-<li>Win10</li>
-<li>Chrome 84.0.4147.135</li>
-<li>ChromeDriver 84.0.4147.30<ol>
-<li>关闭Chrome更新，避免不停换驱动</li>
-<li>下载Chrome对应版本ChromeDriver驱动<a href="https://chromedriver.chromium.org/downloads">下载地址</a></li>
-<li>将ChromeDriver 放到Python安装目录下. 比如：C:\Users\Administrator\AppData\Local\Programs\Python\Python39</li>
-</ol>
-</li>
-<li>Python 3.9.0</li>
-<li>Selenium 3.141.0<br> 安装命令：pip install selenium (提示：如果执行报错，请检查python环境变量配置)</li>
-</ol>
-<h3 id="案例：打开Chrome百度搜索Selenium"><a href="#案例：打开Chrome百度搜索Selenium" class="headerlink" title="案例：打开Chrome百度搜索Selenium"></a>案例：打开Chrome百度搜索Selenium</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from selenium import  webdriver</span><br><span class="line"># 使用Chrome驱动</span><br><span class="line">driver &#x3D; webdriver.Chrome()</span><br><span class="line"># 让浏览器全屏</span><br><span class="line">driver.maximize_window()</span><br><span class="line"># 打开百度</span><br><span class="line">driver.get(&quot;https:&#x2F;&#x2F;baidu.com&quot;)</span><br><span class="line"># 找到百度搜索框元素</span><br><span class="line">input &#x3D; driver.find_element_by_id(&quot;kw&quot;)</span><br><span class="line"># 往输入框中输入搜索关键词&quot;selenium&quot;</span><br><span class="line">input.send_keys(&quot;selenium&quot;)</span><br><span class="line"># 点击百度一下按钮搜索</span><br><span class="line">search &#x3D; driver.find_element_by_id(&quot;su&quot;)</span><br><span class="line">search.click()</span><br></pre></td></tr></table></figure>
-<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><blockquote>
-<p>其实原理就是 Python 通过Selenium 调用浏览器驱动接口，然后驱动Driver接口操作Web中元素进行交互</p>
-</blockquote>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献:"></a>参考文献:</h3><ul>
-<li><a href="https://selenium-python-zh.readthedocs.io/en/latest/index.html">Selenium-Python中文文档</a></li>
-</ul>
-<hr>
-<blockquote>
-<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>自动化测试</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Selenium</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>自动化测试-02：实践</title>
     <url>/2020/12/17/AutoTest02/</url>
     <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
@@ -207,6 +166,47 @@
       </categories>
       <tags>
         <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python-03：Web自动化测试【打开Chrome百度搜索Selenium】</title>
+    <url>/2020/12/17/AutoTest03/</url>
+    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
+<li>环境准备</li>
+<li>案例：打开Chrome百度搜索Selenium</li>
+<li>原理总结</li>
+</ul>
+<a id="more"></a>
+<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><ol>
+<li>Win10</li>
+<li>Chrome 84.0.4147.135</li>
+<li>ChromeDriver 84.0.4147.30<ol>
+<li>关闭Chrome更新，避免不停换驱动</li>
+<li>下载Chrome对应版本ChromeDriver驱动<a href="https://chromedriver.chromium.org/downloads">下载地址</a></li>
+<li>将ChromeDriver 放到Python安装目录下. 比如：C:\Users\Administrator\AppData\Local\Programs\Python\Python39</li>
+</ol>
+</li>
+<li>Python 3.9.0</li>
+<li>Selenium 3.141.0<br> 安装命令：pip install selenium (提示：如果执行报错，请检查python环境变量配置)</li>
+</ol>
+<h3 id="案例：打开Chrome百度搜索Selenium"><a href="#案例：打开Chrome百度搜索Selenium" class="headerlink" title="案例：打开Chrome百度搜索Selenium"></a>案例：打开Chrome百度搜索Selenium</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from selenium import  webdriver</span><br><span class="line"># 使用Chrome驱动</span><br><span class="line">driver &#x3D; webdriver.Chrome()</span><br><span class="line"># 让浏览器全屏</span><br><span class="line">driver.maximize_window()</span><br><span class="line"># 打开百度</span><br><span class="line">driver.get(&quot;https:&#x2F;&#x2F;baidu.com&quot;)</span><br><span class="line"># 找到百度搜索框元素</span><br><span class="line">input &#x3D; driver.find_element_by_id(&quot;kw&quot;)</span><br><span class="line"># 往输入框中输入搜索关键词&quot;selenium&quot;</span><br><span class="line">input.send_keys(&quot;selenium&quot;)</span><br><span class="line"># 点击百度一下按钮搜索</span><br><span class="line">search &#x3D; driver.find_element_by_id(&quot;su&quot;)</span><br><span class="line">search.click()</span><br></pre></td></tr></table></figure>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><blockquote>
+<p>其实原理就是 Python 通过Selenium 调用浏览器驱动接口，然后驱动Driver接口操作Web中元素进行交互</p>
+</blockquote>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献:"></a>参考文献:</h3><ul>
+<li><a href="https://selenium-python-zh.readthedocs.io/en/latest/index.html">Selenium-Python中文文档</a></li>
+</ul>
+<hr>
+<blockquote>
+<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>自动化测试</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Selenium</tag>
       </tags>
   </entry>
   <entry>
@@ -476,6 +476,53 @@
       </tags>
   </entry>
   <entry>
+    <title>CORS-跨域实战</title>
+    <url>/2021/02/05/JS03/</url>
+    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
+<li>前端需要做什么?</li>
+<li>后端需要怎么配置?</li>
+</ul>
+<blockquote>
+<p>由于浏览器的同源安全策略，作为前端开发你使用API调用接口必定会碰到跨域问题，网上太多的文章，大部分都是讲得不太清楚，让你看得特别懵逼，让你可能会做出以下愚蠢行为：跨域配置写到前端的header中、Nginx 跨域配置到Web节点中、瞎填Access-Control-Allow-Headers中的值等等，会导致怎么配置都不对，令你自己发狂。经验提醒：不要急着瞎改瞎试，看完理论相关文章后再尝试，然后静下心来思考流程是怎么运转的，用这样的方式很快就会配对了。以下是我成功跨域配置，希望给你提供一点帮助。</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h3 id="前端需要做什么"><a href="#前端需要做什么" class="headerlink" title="前端需要做什么?"></a>前端需要做什么?</h3><blockquote>
+<p>请求时使用到的header字段梳理并告知后端<br><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master//img/20210126175710.png" alt=""></p>
+</blockquote>
+<hr>
+<h3 id="后端需要怎么配置"><a href="#后端需要怎么配置" class="headerlink" title="后端需要怎么配置?"></a>后端需要怎么配置?</h3><h4 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h4><blockquote>
+<p>注意：针对API 服务配置跨域，而不是Web服务</p>
+<ul>
+<li>疑问1：为啥要配置nginx,因为请求需要转换，所以需要配置</li>
+<li>注意：Access-Control-Allow-Origin <em>，必须加在Nginx层，否则请求不会转换至api server 层，所以api server 层的Access-Control-Allow-Origin </em> 可以去掉，否则会报：<br><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master//img/20210126211841.png" alt=""></li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">location &#x2F;secret-http-api&#x2F; &#123;</span><br><span class="line">            proxy_pass http:&#x2F;&#x2F;127.0.0.1:3001&#x2F;;</span><br><span class="line">            proxy_read_timeout 240s;</span><br><span class="line">            add_header Access-Control-Allow-Origin *;</span><br><span class="line">            add_header Access-Control-Allow-Methods &#39;GET, POST, OPTIONS&#39;;</span><br><span class="line">            add_header Access-Control-Allow-Headers &#39;Content-Type,Authorization,Content-Encoding,Accept-Encoding&#39;;</span><br><span class="line">            if ($request_method &#x3D; &#39;OPTIONS&#39;) &#123;</span><br><span class="line">                return 204;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="API-Server-Nodejs"><a href="#API-Server-Nodejs" class="headerlink" title="API Server (Nodejs)"></a>API Server (Nodejs)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">        app.use(function (req, res, next) &#123;</span><br><span class="line">    if (req.path !&#x3D;&#x3D; &#39;&#x2F;&#39; &amp;&amp; !req.path.includes(&#39;.&#39;)) &#123;</span><br><span class="line">        res.set(&#123;</span><br><span class="line">            &#x2F;* 允许后端发送cookie*&#x2F;</span><br><span class="line">            &#x2F;&#x2F; &#39;Access-Control-Allow-Credentials&#39;: true,</span><br><span class="line">            &#x2F;*任意域名都可以访问,或者基于我请求头里面的域*&#x2F;</span><br><span class="line">            &#x2F;&#x2F; &#39;Access-Control-Allow-Origin&#39;: &#39;*&#39;,</span><br><span class="line">            &#x2F;*允许请求头字段*&#x2F;</span><br><span class="line">            &#x2F;&#x2F; &#39;Access-Control-Allow-Headers&#39;: &#39;Accept,Content-Encoding,Content-Type,Accept-Encoding&#39;,</span><br><span class="line">            &#x2F;*允许请求方式*&#x2F;</span><br><span class="line">            &#39;Access-Control-Allow-Methods&#39;: &#39;POST,GET,OPTIONS&#39;,</span><br><span class="line">            &#x2F;*预检成功后相同请求无需预检的有效时间(单位：秒)*&#x2F;</span><br><span class="line">            &#39;Access-Control-Max-Age&#39;: 3600,</span><br><span class="line">            &#x2F;*默认与允许的文本格式json和编码格式*&#x2F;</span><br><span class="line">            &#39;Content-Type&#39;: &#39;text&#x2F;plain; charset&#x3D;utf-8&#39;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    req.method &#x3D;&#x3D;&#x3D; &#39;OPTIONS&#39; ? res.status(204).end() : next()</span><br><span class="line">&#125;);     </span><br></pre></td></tr></table></figure>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS#%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E9%9C%80%E8%A6%81_cors_%EF%BC%9F">跨源资源共享</a></li>
+<li><a href="https://segmentfault.com/a/1190000022512695">Node设置cors,后端解决跨域问题</a></li>
+<li><a href="https://segmentfault.com/a/1190000009971254">cors跨域之简单请求与预检请求（发送请求头带令牌token）</a></li>
+<li><a href="https://blog.yiguochen.com/options-cors.html">OPTIONS 方法在跨域请求（CORS）中的应用</a></li>
+<li><a href="https://segmentfault.com/a/1190000012550346">Nginx配置跨域请求 Access-Control-Allow-Origin *</a></li>
+</ul>
+<blockquote>
+<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>部署</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>Vue.js</tag>
+        <tag>Node.js</tag>
+        <tag>Express</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>对称加密和非对称加密的应用</title>
     <url>/2020/12/27/JS02/</url>
     <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
@@ -593,53 +640,6 @@
         <tag>非对称加密</tag>
         <tag>AES</tag>
         <tag>RSA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CORS-跨域实战</title>
-    <url>/2021/02/05/JS03/</url>
-    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>前端需要做什么?</li>
-<li>后端需要怎么配置?</li>
-</ul>
-<blockquote>
-<p>由于浏览器的同源安全策略，作为前端开发你使用API调用接口必定会碰到跨域问题，网上太多的文章，大部分都是讲得不太清楚，让你看得特别懵逼，让你可能会做出以下愚蠢行为：跨域配置写到前端的header中、Nginx 跨域配置到Web节点中、瞎填Access-Control-Allow-Headers中的值等等，会导致怎么配置都不对，令你自己发狂。经验提醒：不要急着瞎改瞎试，看完理论相关文章后再尝试，然后静下心来思考流程是怎么运转的，用这样的方式很快就会配对了。以下是我成功跨域配置，希望给你提供一点帮助。</p>
-</blockquote>
-<a id="more"></a>
-<hr>
-<h3 id="前端需要做什么"><a href="#前端需要做什么" class="headerlink" title="前端需要做什么?"></a>前端需要做什么?</h3><blockquote>
-<p>请求时使用到的header字段梳理并告知后端<br><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master//img/20210126175710.png" alt=""></p>
-</blockquote>
-<hr>
-<h3 id="后端需要怎么配置"><a href="#后端需要怎么配置" class="headerlink" title="后端需要怎么配置?"></a>后端需要怎么配置?</h3><h4 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h4><blockquote>
-<p>注意：针对API 服务配置跨域，而不是Web服务</p>
-<ul>
-<li>疑问1：为啥要配置nginx,因为请求需要转换，所以需要配置</li>
-<li>注意：Access-Control-Allow-Origin <em>，必须加在Nginx层，否则请求不会转换至api server 层，所以api server 层的Access-Control-Allow-Origin </em> 可以去掉，否则会报：<br><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master//img/20210126211841.png" alt=""></li>
-</ul>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">location &#x2F;secret-http-api&#x2F; &#123;</span><br><span class="line">            proxy_pass http:&#x2F;&#x2F;127.0.0.1:3001&#x2F;;</span><br><span class="line">            proxy_read_timeout 240s;</span><br><span class="line">            add_header Access-Control-Allow-Origin *;</span><br><span class="line">            add_header Access-Control-Allow-Methods &#39;GET, POST, OPTIONS&#39;;</span><br><span class="line">            add_header Access-Control-Allow-Headers &#39;Content-Type,Authorization,Content-Encoding,Accept-Encoding&#39;;</span><br><span class="line">            if ($request_method &#x3D; &#39;OPTIONS&#39;) &#123;</span><br><span class="line">                return 204;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h4 id="API-Server-Nodejs"><a href="#API-Server-Nodejs" class="headerlink" title="API Server (Nodejs)"></a>API Server (Nodejs)</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">        app.use(function (req, res, next) &#123;</span><br><span class="line">    if (req.path !&#x3D;&#x3D; &#39;&#x2F;&#39; &amp;&amp; !req.path.includes(&#39;.&#39;)) &#123;</span><br><span class="line">        res.set(&#123;</span><br><span class="line">            &#x2F;* 允许后端发送cookie*&#x2F;</span><br><span class="line">            &#x2F;&#x2F; &#39;Access-Control-Allow-Credentials&#39;: true,</span><br><span class="line">            &#x2F;*任意域名都可以访问,或者基于我请求头里面的域*&#x2F;</span><br><span class="line">            &#x2F;&#x2F; &#39;Access-Control-Allow-Origin&#39;: &#39;*&#39;,</span><br><span class="line">            &#x2F;*允许请求头字段*&#x2F;</span><br><span class="line">            &#x2F;&#x2F; &#39;Access-Control-Allow-Headers&#39;: &#39;Accept,Content-Encoding,Content-Type,Accept-Encoding&#39;,</span><br><span class="line">            &#x2F;*允许请求方式*&#x2F;</span><br><span class="line">            &#39;Access-Control-Allow-Methods&#39;: &#39;POST,GET,OPTIONS&#39;,</span><br><span class="line">            &#x2F;*预检成功后相同请求无需预检的有效时间(单位：秒)*&#x2F;</span><br><span class="line">            &#39;Access-Control-Max-Age&#39;: 3600,</span><br><span class="line">            &#x2F;*默认与允许的文本格式json和编码格式*&#x2F;</span><br><span class="line">            &#39;Content-Type&#39;: &#39;text&#x2F;plain; charset&#x3D;utf-8&#39;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    req.method &#x3D;&#x3D;&#x3D; &#39;OPTIONS&#39; ? res.status(204).end() : next()</span><br><span class="line">&#125;);     </span><br></pre></td></tr></table></figure>
-<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS#%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E9%9C%80%E8%A6%81_cors_%EF%BC%9F">跨源资源共享</a></li>
-<li><a href="https://segmentfault.com/a/1190000022512695">Node设置cors,后端解决跨域问题</a></li>
-<li><a href="https://segmentfault.com/a/1190000009971254">cors跨域之简单请求与预检请求（发送请求头带令牌token）</a></li>
-<li><a href="https://blog.yiguochen.com/options-cors.html">OPTIONS 方法在跨域请求（CORS）中的应用</a></li>
-<li><a href="https://segmentfault.com/a/1190000012550346">Nginx配置跨域请求 Access-Control-Allow-Origin *</a></li>
-</ul>
-<blockquote>
-<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>部署</category>
-      </categories>
-      <tags>
-        <tag>Web</tag>
-        <tag>Vue.js</tag>
-        <tag>Node.js</tag>
-        <tag>Express</tag>
       </tags>
   </entry>
   <entry>
@@ -847,6 +847,72 @@
       </tags>
   </entry>
   <entry>
+    <title>Web如何防调试</title>
+    <url>/2020/12/27/Web01/</url>
+    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
+<li>常用防调试方法</li>
+<li>引入条件编译打包</li>
+</ul>
+<a id="more"></a>
+<hr>
+<h3 id="常用防调试方法"><a href="#常用防调试方法" class="headerlink" title="常用防调试方法"></a>常用防调试方法</h3><ul>
+<li>屏蔽：相关按键 + 鼠标右键</li>
+<li>检测控制台是否打开</li>
+<li>检测DevTools 是否打开</li>
+<li>工具类：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;*************************************************************************</span><br><span class="line">&#x2F;&#x2F;     创建日期:     2020-12-23 04:12:52</span><br><span class="line">&#x2F;&#x2F;     文件名称:     AntiDebugUtil.js</span><br><span class="line">&#x2F;&#x2F;     创建作者:     Harry</span><br><span class="line">&#x2F;&#x2F;     版权所有:     剑齿虎</span><br><span class="line">&#x2F;&#x2F;     开发版本:     V1.0</span><br><span class="line">&#x2F;&#x2F;     相关说明:     反调试程序</span><br><span class="line">&#x2F;&#x2F;*************************************************************************</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------------------------------</span><br><span class="line">function AntiDebugUtils() &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------------------------------</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 监听按键 + 鼠标右键</span><br><span class="line"> * *&#x2F;</span><br><span class="line">AntiDebugUtils.prototype.registerKeyDown &#x3D; function () &#123;</span><br><span class="line">  console.log(&quot;hook-----&gt;registerKeyDown&quot;);</span><br><span class="line">  &#x2F;*监听F12、Ctrl + Shift + I、Ctrl + S*&#x2F;</span><br><span class="line">  document.onkeydown &#x3D; function (event) &#123;</span><br><span class="line">    if (event.key &#x3D;&#x3D;&#x3D; &quot;F12&quot;) &#123;</span><br><span class="line">      console.log(&quot;KeyDown: F12&quot;);</span><br><span class="line">      event.returnValue &#x3D; false;</span><br><span class="line">    &#125; else if (event.ctrlKey &amp;&amp; event.shiftKey &amp;&amp; event.key &#x3D;&#x3D;&#x3D; &quot;I&quot;) &#123;&#x2F;&#x2F;此处I必须大写</span><br><span class="line">      console.log(&quot;KeyDown: Ctrl + Shift + I&quot;);</span><br><span class="line">      event.returnValue &#x3D; false;</span><br><span class="line">    &#125; else if (event.ctrlKey &amp;&amp; event.key &#x3D;&#x3D;&#x3D; &quot;s&quot;) &#123;&#x2F;&#x2F;此处s必须小写</span><br><span class="line">      console.log(&quot;KeyDown: Ctrl + S&quot;);</span><br><span class="line">      event.returnValue &#x3D; false;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  &#x2F;*</span><br><span class="line">* 监听右键菜单</span><br><span class="line">* *&#x2F;</span><br><span class="line">  document.oncontextmenu &#x3D; function (event) &#123;</span><br><span class="line">    console.log(&quot;KeyDown: 鼠标右键&quot;);</span><br><span class="line">    event.returnValue &#x3D; false;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------------------------------</span><br><span class="line">&#x2F;*</span><br><span class="line">* 检测控制台是否打开</span><br><span class="line">* *&#x2F;</span><br><span class="line">AntiDebugUtils.prototype.registerConsoleWindow &#x3D; function () &#123;</span><br><span class="line">  console.log(&quot;hook-----&gt;registerConsoleWindow&quot;);</span><br><span class="line">  setInterval(function () &#123;</span><br><span class="line">    const before &#x3D; new Date();</span><br><span class="line">    (function () &#123;</span><br><span class="line">    &#125;).constructor(&quot;debugger&quot;)();</span><br><span class="line">    &#x2F;&#x2F; debugger;</span><br><span class="line">    const after &#x3D; new Date();</span><br><span class="line">    const cost &#x3D; after.getTime() - before.getTime();</span><br><span class="line">    if (cost &gt; 100) &#123;</span><br><span class="line">      console.log(&quot;registerConsoleWindow: 检测到打开了调试窗口&quot;);</span><br><span class="line">      window.location &#x3D; &quot;about:blank&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, 1000);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------------------------------</span><br><span class="line">&#x2F;*</span><br><span class="line">* 检测DevTools 是否打开</span><br><span class="line">* *&#x2F;</span><br><span class="line">AntiDebugUtils.prototype.registerDevTools &#x3D; function () &#123;</span><br><span class="line">  console.log(&quot;hook-----&gt;registerDevTools&quot;);</span><br><span class="line">  let div &#x3D; document.createElement(&#39;div&#39;);</span><br><span class="line">  let loop &#x3D; setInterval(() &#x3D;&gt; &#123;</span><br><span class="line">    console.log(div);</span><br><span class="line">    console.clear();</span><br><span class="line">  &#125;);</span><br><span class="line">  Object.defineProperty(div, &quot;id&quot;, &#123;</span><br><span class="line">    get: () &#x3D;&gt; &#123;</span><br><span class="line">      clearInterval(loop);</span><br><span class="line">      window.location &#x3D; &quot;about:blank&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------------------------------</span><br><span class="line">AntiDebugUtils.prototype.hook &#x3D; function () &#123;</span><br><span class="line">  console.log(&quot;hook-----&gt;&quot;);</span><br><span class="line">  &#x2F;&#x2F; this.registerKeyDown();</span><br><span class="line">  &#x2F;&#x2F; this.registerConsoleWindow();</span><br><span class="line">  &#x2F;&#x2F; this.registerDevTools();</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------------------------------</span><br><span class="line">const antiDebugUtils &#x3D; new AntiDebugUtils();</span><br><span class="line">export default antiDebugUtils;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用方法：main.js 引入和挂在即可<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;* IFTRUE_isRelease *&#x2F;</span><br><span class="line">import antiDebugUtils from &quot;.&#x2F;utls&#x2F;AntiDebugUtil&quot;;</span><br><span class="line">antiDebugUtils.hook();</span><br><span class="line">&#x2F;*FITRUE_isRelease *&#x2F;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="引入条件编译打包："><a href="#引入条件编译打包：" class="headerlink" title="引入条件编译打包："></a>引入条件编译打包：</h3><blockquote>
+<p>项目随着需求不断迭代开发，无法避免的会出现各种环境、各种渠道等，然后针对其打出不同的包，所以就需要我们去了解下条件编译，针对不同条件把不符合条件的代码(JS\CSS\HTML)排除，条件编译插件很多，推荐js-conditional-compile-loader插件，我针对JS\CSS\HTML 分别进行条件编译测试都通过，简单好用</p>
+</blockquote>
+<ul>
+<li>配置条件变量：修改webpack.base.conf.js中的配置(提示：如果使用不同版本Webpack，可能没有webpack.base.conf.js，那么找对应的webpack配置文件即可)<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 根据自己的喜好在options中添加条件变量</span><br><span class="line">const conditionalCompiler &#x3D; &#123;</span><br><span class="line">  loader: &#39;js-conditional-compile-loader&#39;,</span><br><span class="line">  options: &#123;</span><br><span class="line">    isBeta: (process.env.ENV_CONFIG !&#x3D;&#x3D; &quot;prod&quot;) ? true : false,</span><br><span class="line">    isRelease: (process.env.ENV_CONFIG &#x3D;&#x3D;&#x3D; &quot;prod&quot;) ? true : false</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 找到module.exports中的module.rules, 修改成如下样子</span><br><span class="line">&#123;</span><br><span class="line">    test: &#x2F;\.vue$&#x2F;,</span><br><span class="line">    use: [&#39;vue-loader&#39;, conditionalCompiler],</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">test: &#x2F;\.js$&#x2F;,</span><br><span class="line">include: [resolve(&#39;src&#39;), resolve(&#39;test&#39;)],</span><br><span class="line">use: [</span><br><span class="line">    &#x2F;&#x2F;step-2</span><br><span class="line">    &#39;babel-loader?cacheDirectory&#39;,</span><br><span class="line">    &#x2F;&#x2F;step-1</span><br><span class="line">    conditionalCompiler,</span><br><span class="line">],</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></li>
+<li><p>使用方法：</p>
+<blockquote>
+<p>/<em> IFTRUE_条件变量 </em>/  you need contorl coding..  /<em>FITRUE_条件变量 </em>/</p>
+</blockquote>
+</li>
+<li><p>示例：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;* IFTRUE_isRelease *&#x2F;</span><br><span class="line">import antiDebugUtils from &quot;.&#x2F;utls&#x2F;AntiDebugUtil&quot;;</span><br><span class="line">antiDebugUtils.hook();</span><br><span class="line">&#x2F;*FITRUE_isRelease *&#x2F;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>更多：<blockquote>
+<p>其实上面的一种方法就够我用了，你如需了解更多用法请查看API <a href="https://github.com/hzsrc/js-conditional-compile-loader/blob/master/readme-cn.md">传输门</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h3><blockquote>
+<p>现在我们知道怎么防调试了，那接下来怎么做到更安全，那就是把代码混淆掉。下一篇：<a href="">Web代码混淆</a></p>
+</blockquote>
+<h3 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h3><ul>
+<li><a href="https://www.zhangbj.com/p/585.html">Web防调试方法</a></li>
+<li><a href="https://github.com/hzsrc/js-conditional-compile-loader/blob/master/readme-cn.md">js-conditional-compile-loader 使用教程</a></li>
+</ul>
+<h3 id="更多相关："><a href="#更多相关：" class="headerlink" title="更多相关："></a>更多相关：</h3><ul>
+<li>[conditional-compile-loader]<a href="https://developer.aliyun.com/mirror/npm/package/conditional-compile-loader">https://developer.aliyun.com/mirror/npm/package/conditional-compile-loader</a></li>
+<li><a href="https://flands.com/2018/11/06/29.%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91/#package-json">webpack Vue条件编译</a></li>
+<li><a href="https://zoumiaojiang.com/article/common-web-security/">常见 Web 安全攻防总结</a></li>
+<li><a href="https://www.zhangbj.com/p/586.html">攻破Web防调试方法</a></li>
+</ul>
+<hr>
+<blockquote>
+<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Web安全</category>
+      </categories>
+      <tags>
+        <tag>防调试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue3.x + Vite2.x 实战 01：Vite 遇到的坑</title>
     <url>/2021/03/28/Vue3.x_Vite2.x-01/</url>
     <content><![CDATA[<blockquote>
@@ -868,6 +934,7 @@
 <li>main.ts中全局引入样式，使用Sass样式变量提示变量未定义</li>
 </ol>
 <hr>
+<a id="more"></a>
 <h2 id="1-配置alias无效"><a href="#1-配置alias无效" class="headerlink" title="1. 配置alias无效"></a>1. 配置alias无效</h2><ul>
 <li><p>报错如下：</p>
 <p>  <img data-src="https://cdn.jsdelivr.net/gh/yxw007/BlogPicBed@master/img/20210328134430.png" alt=""></p>
@@ -953,72 +1020,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Web如何防调试</title>
-    <url>/2020/12/27/Web01/</url>
-    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>常用防调试方法</li>
-<li>引入条件编译打包</li>
-</ul>
-<a id="more"></a>
-<hr>
-<h3 id="常用防调试方法"><a href="#常用防调试方法" class="headerlink" title="常用防调试方法"></a>常用防调试方法</h3><ul>
-<li>屏蔽：相关按键 + 鼠标右键</li>
-<li>检测控制台是否打开</li>
-<li>检测DevTools 是否打开</li>
-<li>工具类：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;*************************************************************************</span><br><span class="line">&#x2F;&#x2F;     创建日期:     2020-12-23 04:12:52</span><br><span class="line">&#x2F;&#x2F;     文件名称:     AntiDebugUtil.js</span><br><span class="line">&#x2F;&#x2F;     创建作者:     Harry</span><br><span class="line">&#x2F;&#x2F;     版权所有:     剑齿虎</span><br><span class="line">&#x2F;&#x2F;     开发版本:     V1.0</span><br><span class="line">&#x2F;&#x2F;     相关说明:     反调试程序</span><br><span class="line">&#x2F;&#x2F;*************************************************************************</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------------------------------</span><br><span class="line">function AntiDebugUtils() &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------------------------------</span><br><span class="line">&#x2F;**</span><br><span class="line"> * 监听按键 + 鼠标右键</span><br><span class="line"> * *&#x2F;</span><br><span class="line">AntiDebugUtils.prototype.registerKeyDown &#x3D; function () &#123;</span><br><span class="line">  console.log(&quot;hook-----&gt;registerKeyDown&quot;);</span><br><span class="line">  &#x2F;*监听F12、Ctrl + Shift + I、Ctrl + S*&#x2F;</span><br><span class="line">  document.onkeydown &#x3D; function (event) &#123;</span><br><span class="line">    if (event.key &#x3D;&#x3D;&#x3D; &quot;F12&quot;) &#123;</span><br><span class="line">      console.log(&quot;KeyDown: F12&quot;);</span><br><span class="line">      event.returnValue &#x3D; false;</span><br><span class="line">    &#125; else if (event.ctrlKey &amp;&amp; event.shiftKey &amp;&amp; event.key &#x3D;&#x3D;&#x3D; &quot;I&quot;) &#123;&#x2F;&#x2F;此处I必须大写</span><br><span class="line">      console.log(&quot;KeyDown: Ctrl + Shift + I&quot;);</span><br><span class="line">      event.returnValue &#x3D; false;</span><br><span class="line">    &#125; else if (event.ctrlKey &amp;&amp; event.key &#x3D;&#x3D;&#x3D; &quot;s&quot;) &#123;&#x2F;&#x2F;此处s必须小写</span><br><span class="line">      console.log(&quot;KeyDown: Ctrl + S&quot;);</span><br><span class="line">      event.returnValue &#x3D; false;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  &#x2F;*</span><br><span class="line">* 监听右键菜单</span><br><span class="line">* *&#x2F;</span><br><span class="line">  document.oncontextmenu &#x3D; function (event) &#123;</span><br><span class="line">    console.log(&quot;KeyDown: 鼠标右键&quot;);</span><br><span class="line">    event.returnValue &#x3D; false;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------------------------------</span><br><span class="line">&#x2F;*</span><br><span class="line">* 检测控制台是否打开</span><br><span class="line">* *&#x2F;</span><br><span class="line">AntiDebugUtils.prototype.registerConsoleWindow &#x3D; function () &#123;</span><br><span class="line">  console.log(&quot;hook-----&gt;registerConsoleWindow&quot;);</span><br><span class="line">  setInterval(function () &#123;</span><br><span class="line">    const before &#x3D; new Date();</span><br><span class="line">    (function () &#123;</span><br><span class="line">    &#125;).constructor(&quot;debugger&quot;)();</span><br><span class="line">    &#x2F;&#x2F; debugger;</span><br><span class="line">    const after &#x3D; new Date();</span><br><span class="line">    const cost &#x3D; after.getTime() - before.getTime();</span><br><span class="line">    if (cost &gt; 100) &#123;</span><br><span class="line">      console.log(&quot;registerConsoleWindow: 检测到打开了调试窗口&quot;);</span><br><span class="line">      window.location &#x3D; &quot;about:blank&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, 1000);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------------------------------</span><br><span class="line">&#x2F;*</span><br><span class="line">* 检测DevTools 是否打开</span><br><span class="line">* *&#x2F;</span><br><span class="line">AntiDebugUtils.prototype.registerDevTools &#x3D; function () &#123;</span><br><span class="line">  console.log(&quot;hook-----&gt;registerDevTools&quot;);</span><br><span class="line">  let div &#x3D; document.createElement(&#39;div&#39;);</span><br><span class="line">  let loop &#x3D; setInterval(() &#x3D;&gt; &#123;</span><br><span class="line">    console.log(div);</span><br><span class="line">    console.clear();</span><br><span class="line">  &#125;);</span><br><span class="line">  Object.defineProperty(div, &quot;id&quot;, &#123;</span><br><span class="line">    get: () &#x3D;&gt; &#123;</span><br><span class="line">      clearInterval(loop);</span><br><span class="line">      window.location &#x3D; &quot;about:blank&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------------------------------</span><br><span class="line">AntiDebugUtils.prototype.hook &#x3D; function () &#123;</span><br><span class="line">  console.log(&quot;hook-----&gt;&quot;);</span><br><span class="line">  &#x2F;&#x2F; this.registerKeyDown();</span><br><span class="line">  &#x2F;&#x2F; this.registerConsoleWindow();</span><br><span class="line">  &#x2F;&#x2F; this.registerDevTools();</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;-------------------------------------------------------------------------</span><br><span class="line">const antiDebugUtils &#x3D; new AntiDebugUtils();</span><br><span class="line">export default antiDebugUtils;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ul>
-<li>使用方法：main.js 引入和挂在即可<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;* IFTRUE_isRelease *&#x2F;</span><br><span class="line">import antiDebugUtils from &quot;.&#x2F;utls&#x2F;AntiDebugUtil&quot;;</span><br><span class="line">antiDebugUtils.hook();</span><br><span class="line">&#x2F;*FITRUE_isRelease *&#x2F;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="引入条件编译打包："><a href="#引入条件编译打包：" class="headerlink" title="引入条件编译打包："></a>引入条件编译打包：</h3><blockquote>
-<p>项目随着需求不断迭代开发，无法避免的会出现各种环境、各种渠道等，然后针对其打出不同的包，所以就需要我们去了解下条件编译，针对不同条件把不符合条件的代码(JS\CSS\HTML)排除，条件编译插件很多，推荐js-conditional-compile-loader插件，我针对JS\CSS\HTML 分别进行条件编译测试都通过，简单好用</p>
-</blockquote>
-<ul>
-<li>配置条件变量：修改webpack.base.conf.js中的配置(提示：如果使用不同版本Webpack，可能没有webpack.base.conf.js，那么找对应的webpack配置文件即可)<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 根据自己的喜好在options中添加条件变量</span><br><span class="line">const conditionalCompiler &#x3D; &#123;</span><br><span class="line">  loader: &#39;js-conditional-compile-loader&#39;,</span><br><span class="line">  options: &#123;</span><br><span class="line">    isBeta: (process.env.ENV_CONFIG !&#x3D;&#x3D; &quot;prod&quot;) ? true : false,</span><br><span class="line">    isRelease: (process.env.ENV_CONFIG &#x3D;&#x3D;&#x3D; &quot;prod&quot;) ? true : false</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 找到module.exports中的module.rules, 修改成如下样子</span><br><span class="line">&#123;</span><br><span class="line">    test: &#x2F;\.vue$&#x2F;,</span><br><span class="line">    use: [&#39;vue-loader&#39;, conditionalCompiler],</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">test: &#x2F;\.js$&#x2F;,</span><br><span class="line">include: [resolve(&#39;src&#39;), resolve(&#39;test&#39;)],</span><br><span class="line">use: [</span><br><span class="line">    &#x2F;&#x2F;step-2</span><br><span class="line">    &#39;babel-loader?cacheDirectory&#39;,</span><br><span class="line">    &#x2F;&#x2F;step-1</span><br><span class="line">    conditionalCompiler,</span><br><span class="line">],</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></li>
-<li><p>使用方法：</p>
-<blockquote>
-<p>/<em> IFTRUE_条件变量 </em>/  you need contorl coding..  /<em>FITRUE_条件变量 </em>/</p>
-</blockquote>
-</li>
-<li><p>示例：</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;* IFTRUE_isRelease *&#x2F;</span><br><span class="line">import antiDebugUtils from &quot;.&#x2F;utls&#x2F;AntiDebugUtil&quot;;</span><br><span class="line">antiDebugUtils.hook();</span><br><span class="line">&#x2F;*FITRUE_isRelease *&#x2F;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>更多：<blockquote>
-<p>其实上面的一种方法就够我用了，你如需了解更多用法请查看API <a href="https://github.com/hzsrc/js-conditional-compile-loader/blob/master/readme-cn.md">传输门</a></p>
-</blockquote>
-</li>
-</ul>
-<hr>
-<h3 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h3><blockquote>
-<p>现在我们知道怎么防调试了，那接下来怎么做到更安全，那就是把代码混淆掉。下一篇：<a href="">Web代码混淆</a></p>
-</blockquote>
-<h3 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h3><ul>
-<li><a href="https://www.zhangbj.com/p/585.html">Web防调试方法</a></li>
-<li><a href="https://github.com/hzsrc/js-conditional-compile-loader/blob/master/readme-cn.md">js-conditional-compile-loader 使用教程</a></li>
-</ul>
-<h3 id="更多相关："><a href="#更多相关：" class="headerlink" title="更多相关："></a>更多相关：</h3><ul>
-<li>[conditional-compile-loader]<a href="https://developer.aliyun.com/mirror/npm/package/conditional-compile-loader">https://developer.aliyun.com/mirror/npm/package/conditional-compile-loader</a></li>
-<li><a href="https://flands.com/2018/11/06/29.%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91/#package-json">webpack Vue条件编译</a></li>
-<li><a href="https://zoumiaojiang.com/article/common-web-security/">常见 Web 安全攻防总结</a></li>
-<li><a href="https://www.zhangbj.com/p/586.html">攻破Web防调试方法</a></li>
-</ul>
-<hr>
-<blockquote>
-<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Web安全</category>
-      </categories>
-      <tags>
-        <tag>防调试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Web性能优化</title>
     <url>/2021/02/05/Web03/</url>
     <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
@@ -1050,6 +1051,83 @@
       <tags>
         <tag>Vue</tag>
         <tag>WebPack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>创建通用JS公共模块并发布至npm</title>
+    <url>/2021/03/28/Web04/</url>
+    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
+<li>创建：JS公共模块</li>
+<li>打包：使用rollup 打包公共模块</li>
+<li>发布：js公共模块至verdaccio平台</li>
+<li>发布：js公共模块至npm平台</li>
+</ul>
+<a id="more"></a>
+<hr>
+<h3 id="如何创建JS公共模块"><a href="#如何创建JS公共模块" class="headerlink" title="如何创建JS公共模块"></a>如何创建JS公共模块</h3><blockquote>
+<p>由于代码有点多就不贴代码了，直接去代码仓库看吧  <a href="https://github.com/aa4790139/JSCommonUtils">传输门</a></p>
+</blockquote>
+<hr>
+<h3 id="rollup"><a href="#rollup" class="headerlink" title="rollup"></a>rollup</h3><ul>
+<li>简介：<blockquote>
+<p>Rollup 是一个 JavaScript 模块打包器，可以将小块代码编译成大块复杂的代码，例如 library 或应用程序。</p>
+</blockquote>
+</li>
+<li>使用起因：<blockquote>
+<p>公共相关的js文件想弄成单独的一个模块，方便后续开发使用，而不是不停的copy 和paste，所以就去了解怎么样把js公共相关js 打包成一个模块。</p>
+</blockquote>
+</li>
+<li>安装  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pnpm install -g rollup</span><br></pre></td></tr></table></figure></li>
+<li>创建配置文件  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; rollup.config.js</span><br><span class="line">import json from &#39;rollup-plugin-json&#39;;</span><br><span class="line">import babel from &#39;rollup-plugin-babel&#39;;</span><br><span class="line">import &#123;uglify&#125; from &#39;rollup-plugin-uglify&#39;;</span><br><span class="line">import &#123;version&#125; from &#39;..&#x2F;package.json&#39;;</span><br><span class="line">import multiEntry from &quot;rollup-plugin-multi-entry&quot;;</span><br><span class="line">import &#123;terser&#125; from &quot;rollup-plugin-terser&quot;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">    input: &#39;src&#x2F;*.js&#39;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        &#x2F;*输出公共库路径*&#x2F;</span><br><span class="line">        file: &#39;lib&#x2F;index.js&#39;,</span><br><span class="line">        &#x2F;*配置：UMD 通用定义模块，支持前端端跨平台模块化*&#x2F;</span><br><span class="line">        format: &#39;umd&#39;,</span><br><span class="line">        name: &#39;JSCommonUtils&#39;,</span><br><span class="line">        &#x2F;*压缩和混淆js*&#x2F;</span><br><span class="line">        plugins: [terser(), uglify()],</span><br><span class="line">        &#x2F;*JS前缀: 添加库相关信息*&#x2F;</span><br><span class="line">        banner: &#39;&#x2F;* JSCommonUtils version &#39; + version + &#39; *&#x2F;&#39;,</span><br><span class="line">        &#x2F;*JS尾部: 添加个人相关信息*&#x2F;</span><br><span class="line">        footer: &#39;&#x2F;* follow me on github aa4790139 *&#x2F;&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        json(),</span><br><span class="line">        babel(&#123;</span><br><span class="line">            &#x2F;*过滤node_modules编译*&#x2F;</span><br><span class="line">            exclude: &#39;node_modules&#x2F;**&#39;</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;*允许多输入源*&#x2F;</span><br><span class="line">        multiEntry()</span><br><span class="line">    ],</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="verdaccio"><a href="#verdaccio" class="headerlink" title="verdaccio"></a>verdaccio</h3><ul>
+<li>简介： 开源轻量的npm私服包管理平台</li>
+<li>使用起因：<blockquote>
+<p>创建好自己的js公共模块时，我们需要在浏览器和Node.js 环境中测试，有了verdaccio 就非常方便我们测试了。而不是去不停npm本地公共模块搞得非常蛋疼，而且很容易出问题，所以为了简单和方便我们使用verdaccio 搞个私有仓库，方便我们模拟安装使用。</p>
+</blockquote>
+</li>
+<li>安装   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pnpm install -g verdaccio</span><br></pre></td></tr></table></figure></li>
+<li>启动  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">verdaccio</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="发布至verdaccio平台"><a href="#发布至verdaccio平台" class="headerlink" title="发布至verdaccio平台"></a>发布至verdaccio平台</h3><ul>
+<li>常用命令<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;1. 添加用户</span><br><span class="line">npm adduser --registry http:&#x2F;&#x2F;localhost:4873</span><br><span class="line">&#x2F;&#x2F;2. 发布至私有仓库位置</span><br><span class="line">npm publish --registry http:&#x2F;&#x2F;localhost:4873</span><br><span class="line">&#x2F;&#x2F; 撤回发布刚发布包</span><br><span class="line">npm unpublish --force --registry http:&#x2F;&#x2F;localhost:4873 </span><br><span class="line">&#x2F;&#x2F; 撤回发布的指定包</span><br><span class="line">npm unpublish package_name  --force --registry http:&#x2F;&#x2F;localhost:4873</span><br></pre></td></tr></table></figure></li>
+<li>效果图<br><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master//img/20210303144737.png" alt=""></li>
+</ul>
+<h3 id="发布至npm平台"><a href="#发布至npm平台" class="headerlink" title="发布至npm平台"></a>发布至npm平台</h3><ul>
+<li><p>创建.npmignore 文件，过滤掉无需上传的文件和目录</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node_modules&#x2F;*</span><br><span class="line">src&#x2F;</span><br><span class="line">build&#x2F;</span><br><span class="line">.babelrc</span><br><span class="line">.gitignore</span><br><span class="line">package-lock.json</span><br><span class="line">pnpm-lock.yaml</span><br><span class="line">!node_modules&#x2F;crc32</span><br><span class="line">!node_modules&#x2F;deflate-js</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>提示: .npmignore文件内容，需要忽略的文件和目录写前面，需要排除忽略的文件或目录前加!写后面</p>
+</blockquote>
+</li>
+<li><p>效果图<br><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master//img/20210303144716.png" alt=""></p>
+</li>
+</ul>
+<hr>
+<h4 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h4><ul>
+<li><a href="https://verdaccio.org/docs/en/installation">verdaccio 官网</a></li>
+<li><a href="https://fe.rualc.com/note/npm-verdaccio.html#npm-install">verdaccio 搭建配置</a></li>
+<li><a href="https://www.rollupjs.com/guide/tools">rollup.js 中文文档</a></li>
+<li><a href="https://github.com/Godiswill/blog/issues/6">rollup 官网打包实践</a></li>
+<li><a href="https://chenshenhai.github.io/rollupjs-note/">Rollup.js 实战学习笔记</a></li>
+<li><a href="https://stackoverflow.com/questions/48092647/npmignore-ignore-whole-folder-except-given-file-types">.npmignore: ignore whole folder except given file types</a></li>
+</ul>
+<hr>
+<blockquote>
+<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>模块化</category>
+      </categories>
+      <tags>
+        <tag>UMD</tag>
+        <tag>rollup</tag>
+        <tag>verdaccio</tag>
+        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
@@ -1128,83 +1206,6 @@
         <tag>DllPlugin</tag>
         <tag>DllReferencePlugin</tag>
         <tag>打包优化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>创建通用JS公共模块并发布至npm</title>
-    <url>/2021/03/28/Web04/</url>
-    <content><![CDATA[<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>创建：JS公共模块</li>
-<li>打包：使用rollup 打包公共模块</li>
-<li>发布：js公共模块至verdaccio平台</li>
-<li>发布：js公共模块至npm平台</li>
-</ul>
-<a id="more"></a>
-<hr>
-<h3 id="如何创建JS公共模块"><a href="#如何创建JS公共模块" class="headerlink" title="如何创建JS公共模块"></a>如何创建JS公共模块</h3><blockquote>
-<p>由于代码有点多就不贴代码了，直接去代码仓库看吧  <a href="https://github.com/aa4790139/JSCommonUtils">传输门</a></p>
-</blockquote>
-<hr>
-<h3 id="rollup"><a href="#rollup" class="headerlink" title="rollup"></a>rollup</h3><ul>
-<li>简介：<blockquote>
-<p>Rollup 是一个 JavaScript 模块打包器，可以将小块代码编译成大块复杂的代码，例如 library 或应用程序。</p>
-</blockquote>
-</li>
-<li>使用起因：<blockquote>
-<p>公共相关的js文件想弄成单独的一个模块，方便后续开发使用，而不是不停的copy 和paste，所以就去了解怎么样把js公共相关js 打包成一个模块。</p>
-</blockquote>
-</li>
-<li>安装  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pnpm install -g rollup</span><br></pre></td></tr></table></figure></li>
-<li>创建配置文件  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; rollup.config.js</span><br><span class="line">import json from &#39;rollup-plugin-json&#39;;</span><br><span class="line">import babel from &#39;rollup-plugin-babel&#39;;</span><br><span class="line">import &#123;uglify&#125; from &#39;rollup-plugin-uglify&#39;;</span><br><span class="line">import &#123;version&#125; from &#39;..&#x2F;package.json&#39;;</span><br><span class="line">import multiEntry from &quot;rollup-plugin-multi-entry&quot;;</span><br><span class="line">import &#123;terser&#125; from &quot;rollup-plugin-terser&quot;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">    input: &#39;src&#x2F;*.js&#39;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        &#x2F;*输出公共库路径*&#x2F;</span><br><span class="line">        file: &#39;lib&#x2F;index.js&#39;,</span><br><span class="line">        &#x2F;*配置：UMD 通用定义模块，支持前端端跨平台模块化*&#x2F;</span><br><span class="line">        format: &#39;umd&#39;,</span><br><span class="line">        name: &#39;JSCommonUtils&#39;,</span><br><span class="line">        &#x2F;*压缩和混淆js*&#x2F;</span><br><span class="line">        plugins: [terser(), uglify()],</span><br><span class="line">        &#x2F;*JS前缀: 添加库相关信息*&#x2F;</span><br><span class="line">        banner: &#39;&#x2F;* JSCommonUtils version &#39; + version + &#39; *&#x2F;&#39;,</span><br><span class="line">        &#x2F;*JS尾部: 添加个人相关信息*&#x2F;</span><br><span class="line">        footer: &#39;&#x2F;* follow me on github aa4790139 *&#x2F;&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        json(),</span><br><span class="line">        babel(&#123;</span><br><span class="line">            &#x2F;*过滤node_modules编译*&#x2F;</span><br><span class="line">            exclude: &#39;node_modules&#x2F;**&#39;</span><br><span class="line">        &#125;),</span><br><span class="line">        &#x2F;*允许多输入源*&#x2F;</span><br><span class="line">        multiEntry()</span><br><span class="line">    ],</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h3 id="verdaccio"><a href="#verdaccio" class="headerlink" title="verdaccio"></a>verdaccio</h3><ul>
-<li>简介： 开源轻量的npm私服包管理平台</li>
-<li>使用起因：<blockquote>
-<p>创建好自己的js公共模块时，我们需要在浏览器和Node.js 环境中测试，有了verdaccio 就非常方便我们测试了。而不是去不停npm本地公共模块搞得非常蛋疼，而且很容易出问题，所以为了简单和方便我们使用verdaccio 搞个私有仓库，方便我们模拟安装使用。</p>
-</blockquote>
-</li>
-<li>安装   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pnpm install -g verdaccio</span><br></pre></td></tr></table></figure></li>
-<li>启动  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">verdaccio</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="发布至verdaccio平台"><a href="#发布至verdaccio平台" class="headerlink" title="发布至verdaccio平台"></a>发布至verdaccio平台</h3><ul>
-<li>常用命令<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;1. 添加用户</span><br><span class="line">npm adduser --registry http:&#x2F;&#x2F;localhost:4873</span><br><span class="line">&#x2F;&#x2F;2. 发布至私有仓库位置</span><br><span class="line">npm publish --registry http:&#x2F;&#x2F;localhost:4873</span><br><span class="line">&#x2F;&#x2F; 撤回发布刚发布包</span><br><span class="line">npm unpublish --force --registry http:&#x2F;&#x2F;localhost:4873 </span><br><span class="line">&#x2F;&#x2F; 撤回发布的指定包</span><br><span class="line">npm unpublish package_name  --force --registry http:&#x2F;&#x2F;localhost:4873</span><br></pre></td></tr></table></figure></li>
-<li>效果图<br><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master//img/20210303144737.png" alt=""></li>
-</ul>
-<h3 id="发布至npm平台"><a href="#发布至npm平台" class="headerlink" title="发布至npm平台"></a>发布至npm平台</h3><ul>
-<li><p>创建.npmignore 文件，过滤掉无需上传的文件和目录</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node_modules&#x2F;*</span><br><span class="line">src&#x2F;</span><br><span class="line">build&#x2F;</span><br><span class="line">.babelrc</span><br><span class="line">.gitignore</span><br><span class="line">package-lock.json</span><br><span class="line">pnpm-lock.yaml</span><br><span class="line">!node_modules&#x2F;crc32</span><br><span class="line">!node_modules&#x2F;deflate-js</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>提示: .npmignore文件内容，需要忽略的文件和目录写前面，需要排除忽略的文件或目录前加!写后面</p>
-</blockquote>
-</li>
-<li><p>效果图<br><img data-src="https://cdn.jsdelivr.net/gh/aa4790139/BlogPicBed@master//img/20210303144716.png" alt=""></p>
-</li>
-</ul>
-<hr>
-<h4 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h4><ul>
-<li><a href="https://verdaccio.org/docs/en/installation">verdaccio 官网</a></li>
-<li><a href="https://fe.rualc.com/note/npm-verdaccio.html#npm-install">verdaccio 搭建配置</a></li>
-<li><a href="https://www.rollupjs.com/guide/tools">rollup.js 中文文档</a></li>
-<li><a href="https://github.com/Godiswill/blog/issues/6">rollup 官网打包实践</a></li>
-<li><a href="https://chenshenhai.github.io/rollupjs-note/">Rollup.js 实战学习笔记</a></li>
-<li><a href="https://stackoverflow.com/questions/48092647/npmignore-ignore-whole-folder-except-given-file-types">.npmignore: ignore whole folder except given file types</a></li>
-</ul>
-<hr>
-<blockquote>
-<p>以上: 如发现有问题，欢迎留言指出，我及时更正</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>模块化</category>
-      </categories>
-      <tags>
-        <tag>UMD</tag>
-        <tag>rollup</tag>
-        <tag>verdaccio</tag>
-        <tag>npm</tag>
       </tags>
   </entry>
 </search>
