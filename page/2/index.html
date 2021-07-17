@@ -201,7 +201,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yanxuewen.cn/2021/02/05/JS03/">
+    <link itemprop="mainEntityOfPage" href="https://yanxuewen.cn/2021/04/11/Vue3.x_Vite2.x-04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -215,7 +215,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/02/05/JS03/" class="post-title-link" itemprop="url">CORS-跨域实战</a>
+            <a href="/2021/04/11/Vue3.x_Vite2.x-04/" class="post-title-link" itemprop="url">Vue3.x + Vite2.x 入门实战 04：不管怎么设置z-index值，元素层级仍然不对</a>
         </h2>
 
         <div class="post-meta">
@@ -225,14 +225,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-02-05 16:36:40" itemprop="dateCreated datePublished" datetime="2021-02-05T16:36:40+08:00">2021-02-05</time>
+              <time title="创建时间：2021-04-11 10:44:09" itemprop="dateCreated datePublished" datetime="2021-04-11T10:44:09+08:00">2021-04-11</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-28 11:09:12" itemprop="dateModified" datetime="2021-03-28T11:09:12+08:00">2021-03-28</time>
+                <time title="修改时间：2021-07-17 19:25:02" itemprop="dateModified" datetime="2021-07-17T19:25:02+08:00">2021-07-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -240,12 +240,12 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%83%A8%E7%BD%B2/" itemprop="url" rel="index"><span itemprop="name">部署</span></a>
+                  <a href="/categories/Vue3-x-Vite2-x-%E5%85%A5%E9%97%A8%E5%AE%9E%E6%88%98/" itemprop="url" rel="index"><span itemprop="name">Vue3.x + Vite2.x 入门实战</span></a>
                 </span>
             </span>
 
           
-            <span id="/2021/02/05/JS03/" class="post-meta-item leancloud_visitors" data-flag-title="CORS-跨域实战" title="阅读次数">
+            <span id="/2021/04/11/Vue3.x_Vite2.x-04/" class="post-meta-item leancloud_visitors" data-flag-title="Vue3.x + Vite2.x 入门实战 04：不管怎么设置z-index值，元素层级仍然不对" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -260,8 +260,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/02/05/JS03/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/02/05/JS03/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/04/11/Vue3.x_Vite2.x-04/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/11/Vue3.x_Vite2.x-04/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -271,14 +271,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.9k</span>
+              <span>1.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -290,16 +290,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>前端需要做什么?</li>
-<li>后端需要怎么配置?</li>
-</ul>
-<blockquote>
-<p>由于浏览器的同源安全策略，作为前端开发你使用API调用接口必定会碰到跨域问题，网上太多的文章，大部分都是讲得不太清楚，让你看得特别懵逼，让你可能会做出以下愚蠢行为：跨域配置写到前端的header中、Nginx 跨域配置到Web节点中、瞎填Access-Control-Allow-Headers中的值等等，会导致怎么配置都不对，令你自己发狂。经验提醒：不要急着瞎改瞎试，看完理论相关文章后再尝试，然后静下心来思考流程是怎么运转的，用这样的方式很快就会配对了。以下是我成功跨域配置，希望给你提供一点帮助。</p>
+          <blockquote>
+<p>编写页面布局时，必定会碰到的问题，不管怎么设置z-index值，元素都被挡住。原因：没有真正理解CSS层叠样式是啥</p>
 </blockquote>
+<h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
+<li>元素层级不对情况</li>
+<li>解决层级不对方案</li>
+<li>总结</li>
+</ul>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/02/05/JS03/#more" rel="contents">
+              <a class="btn" href="/2021/04/11/Vue3.x_Vite2.x-04/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -323,7 +324,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yanxuewen.cn/2021/01/03/Web02/">
+    <link itemprop="mainEntityOfPage" href="https://yanxuewen.cn/2021/04/11/Vue3.x_Vite2.x-02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -337,7 +338,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/01/03/Web02/" class="post-title-link" itemprop="url">Web代码混淆</a>
+            <a href="/2021/04/11/Vue3.x_Vite2.x-02/" class="post-title-link" itemprop="url">Vue3.x + Vite2.x 入门实战 02：搞懂各种对齐参数</a>
         </h2>
 
         <div class="post-meta">
@@ -347,20 +348,27 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-01-03 22:29:54" itemprop="dateCreated datePublished" datetime="2021-01-03T22:29:54+08:00">2021-01-03</time>
+              <time title="创建时间：2021-04-11 10:44:09" itemprop="dateCreated datePublished" datetime="2021-04-11T10:44:09+08:00">2021-04-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-17 19:25:02" itemprop="dateModified" datetime="2021-07-17T19:25:02+08:00">2021-07-17</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">Web安全</span></a>
+                  <a href="/categories/Vue3-x-Vite2-x-%E5%85%A5%E9%97%A8%E5%AE%9E%E6%88%98/" itemprop="url" rel="index"><span itemprop="name">Vue3.x + Vite2.x 入门实战</span></a>
                 </span>
             </span>
 
           
-            <span id="/2021/01/03/Web02/" class="post-meta-item leancloud_visitors" data-flag-title="Web代码混淆" title="阅读次数">
+            <span id="/2021/04/11/Vue3.x_Vite2.x-02/" class="post-meta-item leancloud_visitors" data-flag-title="Vue3.x + Vite2.x 入门实战 02：搞懂各种对齐参数" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -375,8 +383,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/01/03/Web02/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/03/Web02/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/04/11/Vue3.x_Vite2.x-02/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/11/Vue3.x_Vite2.x-02/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -386,7 +394,260 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.6k</span>
+              <span>5.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>最常用的text-align、align-item、vertical_align、justify-content 这四个参数容易搞混淆 ，没搞清楚概念经常循环着尝试影响效率 😂，所以动手实践搞清楚一下。</p>
+</blockquote>
+<hr>
+<p><em>提示：只演示2-3种属性值效果，其他去查api即可</em></p>
+<h2 id="概要内容："><a href="#概要内容：" class="headerlink" title="概要内容："></a>概要内容：</h2><ol>
+<li>text-align</li>
+<li>align-item</li>
+<li>vertical_align</li>
+<li>justify-content</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/11/Vue3.x_Vite2.x-02/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yanxuewen.cn/2021/03/28/Vue3.x_Vite2.x-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Potter">
+      <meta itemprop="description" content="涉猎编程语言: C#、C++、JAVA、JS、Python, 领域涵盖：U3D、Vue、NodeJS、Express、Spring MVC、MyBatis、Spring Cloud、Mysql、Redis等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Potter's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/28/Vue3.x_Vite2.x-01/" class="post-title-link" itemprop="url">Vue3.x + Vite2.x 入门实战 01：Vite 遇到的坑</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-28 13:02:58" itemprop="dateCreated datePublished" datetime="2021-03-28T13:02:58+08:00">2021-03-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-17 19:25:02" itemprop="dateModified" datetime="2021-07-17T19:25:02+08:00">2021-07-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue3-x-Vite2-x-%E5%85%A5%E9%97%A8%E5%AE%9E%E6%88%98/" itemprop="url" rel="index"><span itemprop="name">Vue3.x + Vite2.x 入门实战</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/03/28/Vue3.x_Vite2.x-01/" class="post-meta-item leancloud_visitors" data-flag-title="Vue3.x + Vite2.x 入门实战 01：Vite 遇到的坑" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/03/28/Vue3.x_Vite2.x-01/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/28/Vue3.x_Vite2.x-01/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>728</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>为了记录自己的成长经历，我决定把自己实战遇到的坑记录起来，一来方便日后查阅，二来给后人提供一份帮助。</p>
+</blockquote>
+<p><em>提示：本篇文章会持续更新，记录Vite相关遇到的坑</em></p>
+<h2 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h2><p>大家都熟知开发环境不同，碰到的问题很有可能也不同。为了不给大家带来困恼（跟你配置完全一样，为啥你的可以我的不可以），介绍下我的开发环境</p>
+<ul>
+<li>Windows 10</li>
+<li>VSCode  1.54.3</li>
+<li>Node.js v12.16.1</li>
+<li>Vue 3.0.5</li>
+<li>Vite 2.0.5</li>
+<li>typescript 4.1.3</li>
+</ul>
+<hr>
+<h2 id="概要内容："><a href="#概要内容：" class="headerlink" title="概要内容："></a>概要内容：</h2><ol>
+<li>配置alias无效</li>
+<li>main.ts中全局引入样式，使用Sass样式变量提示变量未定义</li>
+</ol>
+<hr>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/28/Vue3.x_Vite2.x-01/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yanxuewen.cn/2021/03/28/Web04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Potter">
+      <meta itemprop="description" content="涉猎编程语言: C#、C++、JAVA、JS、Python, 领域涵盖：U3D、Vue、NodeJS、Express、Spring MVC、MyBatis、Spring Cloud、Mysql、Redis等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Potter's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/28/Web04/" class="post-title-link" itemprop="url">创建通用JS公共模块并发布至npm</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-28 11:09:12" itemprop="dateCreated datePublished" datetime="2021-03-28T11:09:12+08:00">2021-03-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%A8%A1%E5%9D%97%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">模块化</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/03/28/Web04/" class="post-meta-item leancloud_visitors" data-flag-title="创建通用JS公共模块并发布至npm" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/03/28/Web04/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/28/Web04/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -406,15 +667,14 @@
 
       
           <h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>代码混淆</li>
-<li>环境准备</li>
-<li>如何配置UglifyJsPlugin混淆参数</li>
-<li>混淆效果</li>
-<li>Demo源码工程</li>
+<li>创建：JS公共模块</li>
+<li>打包：使用rollup 打包公共模块</li>
+<li>发布：js公共模块至verdaccio平台</li>
+<li>发布：js公共模块至npm平台</li>
 </ul>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/01/03/Web02/#more" rel="contents">
+              <a class="btn" href="/2021/03/28/Web04/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -438,7 +698,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yanxuewen.cn/2021/01/03/WebBuild01/">
+    <link itemprop="mainEntityOfPage" href="https://yanxuewen.cn/2021/03/28/TypeScript01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -452,7 +712,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/01/03/WebBuild01/" class="post-title-link" itemprop="url">Web构建优化</a>
+            <a href="/2021/03/28/TypeScript01/" class="post-title-link" itemprop="url">TypeScript 入门1：创建一个在Chrome上运行的TypeScript Demo</a>
         </h2>
 
         <div class="post-meta">
@@ -462,27 +722,20 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-01-03 22:29:54" itemprop="dateCreated datePublished" datetime="2021-01-03T22:29:54+08:00">2021-01-03</time>
+              <time title="创建时间：2021-03-28 11:09:12" itemprop="dateCreated datePublished" datetime="2021-03-28T11:09:12+08:00">2021-03-28</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-16 17:21:47" itemprop="dateModified" datetime="2021-02-16T17:21:47+08:00">2021-02-16</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/webpack/" itemprop="url" rel="index"><span itemprop="name">webpack</span></a>
+                  <a href="/categories/TypeScript-%E5%85%A5%E9%97%A8/" itemprop="url" rel="index"><span itemprop="name">TypeScript 入门</span></a>
                 </span>
             </span>
 
           
-            <span id="/2021/01/03/WebBuild01/" class="post-meta-item leancloud_visitors" data-flag-title="Web构建优化" title="阅读次数">
+            <span id="/2021/03/28/TypeScript01/" class="post-meta-item leancloud_visitors" data-flag-title="TypeScript 入门1：创建一个在Chrome上运行的TypeScript Demo" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -497,8 +750,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/01/03/WebBuild01/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/03/WebBuild01/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/03/28/TypeScript01/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/28/TypeScript01/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -508,7 +761,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.4k</span>
+              <span>1.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -527,254 +780,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>DllPlugin 和 DllReferencePlugin 简介</li>
-<li>如何使用DllPlugin打包，及DllReferencePlugin如何引用dll</li>
-<li>构建优化效果</li>
-<li>SplitChunks </li>
-<li>Demo源码工程</li>
+          <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><blockquote>
+<p>目前使用TypeScript编写前端项目已成为趋势，所以搞一个运行在Chrome的demo 来方便练习一下TypeScript 相关语法。由于技术更新太快，会导致你在网上参考的例子可能已经过时，或者运行不起来。我的建议还是直接先去看官方文档，尝试这编写demo，实在搞不出来再去Google 查找相关文章。</p>
+</blockquote>
+<h3 id="构建环境"><a href="#构建环境" class="headerlink" title="构建环境"></a>构建环境</h3><ul>
+<li>vscode：1.53.2</li>
+<li>chrome：87.0.42.80.141</li>
+<li>Node.js：12.8.3</li>
+<li>win10</li>
 </ul>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/01/03/WebBuild01/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yanxuewen.cn/2020/12/27/Web01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Potter">
-      <meta itemprop="description" content="涉猎编程语言: C#、C++、JAVA、JS、Python, 领域涵盖：U3D、Vue、NodeJS、Express、Spring MVC、MyBatis、Spring Cloud、Mysql、Redis等">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Potter's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/27/Web01/" class="post-title-link" itemprop="url">Web如何防调试</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-12-27 18:29:09 / 修改时间：19:41:14" itemprop="dateCreated datePublished" datetime="2020-12-27T18:29:09+08:00">2020-12-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">Web安全</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/12/27/Web01/" class="post-meta-item leancloud_visitors" data-flag-title="Web如何防调试" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/12/27/Web01/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/12/27/Web01/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>4.8k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>常用防调试方法</li>
-<li>引入条件编译打包</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/27/Web01/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yanxuewen.cn/2020/12/27/JS02/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Potter">
-      <meta itemprop="description" content="涉猎编程语言: C#、C++、JAVA、JS、Python, 领域涵盖：U3D、Vue、NodeJS、Express、Spring MVC、MyBatis、Spring Cloud、Mysql、Redis等">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Potter's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/27/JS02/" class="post-title-link" itemprop="url">对称加密和非对称加密的应用</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-12-27 15:39:08" itemprop="dateCreated datePublished" datetime="2020-12-27T15:39:08+08:00">2020-12-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-03 22:29:54" itemprop="dateModified" datetime="2021-01-03T22:29:54+08:00">2021-01-03</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8A%A0%E5%AF%86/" itemprop="url" rel="index"><span itemprop="name">加密</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/12/27/JS02/" class="post-meta-item leancloud_visitors" data-flag-title="对称加密和非对称加密的应用" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/12/27/JS02/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/12/27/JS02/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.9k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="概要内容"><a href="#概要内容" class="headerlink" title="概要内容"></a>概要内容</h3><ul>
-<li>什么是对称加密</li>
-<li>对称加密demo</li>
-<li>什么是非对称加密</li>
-<li>非对称加密demo</li>
-<li>对称加密与非对称加密组合使用</li>
-<li>介绍一套可行的混合加密方案，怎么应用到接口数据加密中</li>
-<li>Demo源码工程</li>
-</ul>
-<h2 id=""><a href="#" class="headerlink" title=""></a>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/27/JS02/#more" rel="contents">
+              <a class="btn" href="/2021/03/28/TypeScript01/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -797,7 +814,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -865,20 +882,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-count">51</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -930,12 +947,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">43k</span>
+    <span title="站点总字数">63k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">39 分钟</span>
+    <span title="站点阅读时长">58 分钟</span>
 </div>
 
         
